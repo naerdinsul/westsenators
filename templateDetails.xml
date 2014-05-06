@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="3.0" type="template" client="site">
+	<name>West Senators</name>
+	<version>0.1</version>
+	<creationDate>2/1/2013</creationDate>
+	<author>William Deacon</author>
+	<authorEmail>william.deacon@scoca.org</authorEmail>
+	<authorUrl>http://www.west.k12.oh.us/</authorUrl>
+	<copyright></copyright>
+	<license></license>
+	<description>Joomla! 3.9 template designed for the Washington-Nile Local School District.</description>
+
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<!--<folder>javascript</folder>-->
+		<!--<filename>component.php</filename>-->
+		<!--<filename>error.php</filename>-->
+	</files>
+
+	<positions>
+		<position>banner</position>
+		<position>topmenu</position>
+		<position>leftmenu</position>
+		<position>footer</position>
+	</positions>
+
+</extension>

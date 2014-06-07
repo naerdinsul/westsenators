@@ -57,6 +57,17 @@ body {
 	background: url(/templates/westsenators/images/bg-header.png) repeat;
 }
 
+#navdropshadow {
+	background: url(/templates/westsenators/images/bg-drop-shadow.png) repeat-x;
+	position: relative;
+	z-index: 10px;
+	height: 10px;
+}
+
+#sitebody {
+	margin-top: -10px;
+}
+
 .center {
 	text-align: center;
 	margin: 0 auto;
@@ -118,6 +129,7 @@ body {
 #primaryNav li:hover ul {
 	display: block;
 	position: absolute;
+	z-index: 20;
 }
 
 #primaryNav li:hover ul:before{

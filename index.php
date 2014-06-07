@@ -51,12 +51,11 @@
 	
 	<!-- Navigation Menu -->
 	<jdoc:include type="modules" name="navmenu" style="xhtml" />
+	<div id="navdropshadow"></div>
 	
 	<!-- Site Body -->
 	<div id="sitebody" class="grid-container">
 		<div class="clearfix" style="background-color: white">
-			<div style="background: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/bg-drop-shadow.png') repeat-x #FFF; height: 10px"></div>
-			
 			<!-- Breadcrumb -->
 			<!--<div class="breadcrumb">
 				<jdoc:include type="modules" name="breadcrumb" />

@@ -53,6 +53,10 @@ body {
 	background: url(/templates/westsenators/images/bg-content.png) repeat;
 }
 
+#header {
+	background: url(/templates/westsenators/images/bg-header.png) repeat;
+}
+
 .center {
 	text-align: center;
 	margin: 0 auto;

@@ -45,20 +45,25 @@
 <body>
 
 	<!-- Header -->
-	<div id="header" style="background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/headerbg.jpg'); background-repeat: repeat-x repeat-y; height: 200px">
+	<div id="header" style="height: 200px">
 		<!--<jdoc:include type="modules" name="banner" style="xhtml" />-->
 	</div>
 	
 	<!-- Navigation Menu -->
-	<jdoc:include type="modules" name="topmenu" style="xhtml" />
+	<jdoc:include type="modules" name="navmenu" style="xhtml" />
 	
 	<!-- Site Body -->
-	<div id="sitebody" class="grid-container" style="background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/bodybg.jpg'); background-repeat: repeat-x;">
+	<div id="sitebody" class="grid-container">
 		<div class="clearfix" style="background-color: white">
 			<div style="background: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/bg-drop-shadow.png') repeat-x #FFF; height: 10px"></div>
-			<div class="breadcrumb">
-				HOME | HIGHSCHOOL | ATHLETICS | BAND
-			</div>
+			
+			<!-- Breadcrumb -->
+			<!--<div class="breadcrumb">
+				<jdoc:include type="modules" name="breadcrumb" />
+				<!--HOME | HIGHSCHOOL | ATHLETICS | BAND-->
+			<!--</div>-->
+			
+			
 			<div class="hide-on-mobile">
 				<div class="grid-25" style="height: 1000px"></div>
 				<div class="grid-75" style="height: 1000px"></div>
@@ -69,20 +74,6 @@
 		</div>
 	</div>
 	
-	
-	
-	<!--<div id="sitebody" style="clear: both; background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/bodybg.jpg'); background-repeat: repeat-x;">
-	<div id="sitebody" class="grid-container">
-		<div class="hide-on-mobile">
-			<div class="grid-25" style="background: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/contentbg.jpg') repeat-x #FFF; height: 1000px"></div>
-			<div class="grid-75" style="background: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/contentbg.jpg') repeat-x #FFF; height: 1000px"></div>
-		</div>
-		<div class="hide-on-desktop">
-			<div class="grid-100" style="background: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/contentbg.jpg') repeat-x #FFF; height: 1000px"></div>
-		</div>
-	</div>
-	</div>-->
-
 	<!-- Footer -->
 	<div id="footer" style="background: url(/templates/westsenators/images/bg-footer.png) repeat; border-top: 1px solid white; padding: 30px;">
 	<div class="grid-container">

@@ -9,7 +9,7 @@
 	<authorUrl>http://www.west.k12.oh.us/</authorUrl>
 	<copyright></copyright>
 	<license></license>
-	<description>Joomla! 3.9 template designed for the Washington-Nile Local School District.</description>
+	<description>Joomla! 3.0 template designed for the Washington-Nile Local School District.</description>
 
 	<files>
 		<folder>css</folder>
@@ -28,7 +28,8 @@
 
 	<positions>
 		<position>banner</position>
-		<position>topmenu</position>
+		<position>navmenu</position>
+		<position>breadcrumb</position>
 		<position>leftmenu</position>
 		<position>footer</position>
 	</positions>

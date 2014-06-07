@@ -5,26 +5,39 @@
 	$app = JFactory::getApplication();
 	$this->setTitle(  $app->getCfg( 'sitename' ) . ' - ' . $this->getTitle());
 	?>
-	<!-- Base CSS Stylesheet -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/style.css" type="text/css">
-	
-	<!-- Dropdown menu CSS -->
-	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/dropdown/dropdown.css" media="screen" type="text/css">
-	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/dropdown/theme.css" media="screen" type="text/css">
-	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/dropdown/horizontal-centering.css" media="screen" type="text/css">
-	
-	<!-- Nivo-Slider -->
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/unsemantic-grid-responsive.css" type="text/css">
+
+	<!-- Nivo Slider -->
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
 	<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery.nivo.slider.pack.js"></script>
     <script type="text/javascript">
-	$j = jQuery.noConflict();
+	/*$j = jQuery.noConflict();
     $j(window).load(function() {
 		$j('#slider').nivoSlider({
 			directionNav: false,
 			controlNav: false
 		});
-    });
+    });*/
+    </script>
+	
+	<!-- JQuery functions -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#mobileNav').children('li').each(function() {
+				$(this).click(function() {
+					/* Hide everything */
+					$('#mobileNav').children('li').not(this).children('ul').each(function() {
+						$(this).hide();
+					});
+				
+					/* Toggle the currently clicked item */
+					$(this).children('ul').toggle();
+				});
+			});
+		});
     </script>
 	<jdoc:include type="head" />
 </head>
@@ -32,56 +45,70 @@
 <body>
 
 	<!-- Header -->
-	<div id="header-top" style="height: 90px; background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/headerbg.jpg'); background-repeat: repeat-x repeat-y;">
-		
-		<!-- Nivo Slider Images -->
-		<div id="slider" class="nivoSlider" style="width: 980px; height: 90px; margin: auto;">
-			<img src="/templates/westsenators/slider/toystory.jpg" data-thumb="/templates/westsenators/slider/toystory.jpg" alt="">
-			<img src="/templates/westsenators/slider/walle.jpg" data-thumb="/templates/westsenators/slider/walle.jpg" alt="">
-			<img src="/templates/westsenators/slider/nemo.jpg" data-thumb="/templates/westsenators/slider/nemo.jpg" alt="">
-			<jdoc:include type="modules" name="banner" style="xhtml" />
-		</div>
+	<div id="header" style="background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/headerbg.jpg'); background-repeat: repeat-x repeat-y; height: 200px">
+		<!--<jdoc:include type="modules" name="banner" style="xhtml" />-->
 	</div>
 	
 	<!-- Navigation Menu -->
-	<div id="header-main" style="height: 40px; background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/menubg.jpg'); background-repeat: repeat-x;">
-		<div class="horizontal-centering"><div><div>
-			<ul class="dropdown dropdown-horizontal">
-				<jdoc:include type="modules" name="topmenu" style="xhtml" />
-			</ul>
-		</div></div></div>
-	</div>
-
-	<!-- Site Body -->
-	<div id="sitebody" style="background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/bodybg.jpg'); background-repeat: repeat-x;" >
-	<div id="wrapper" style="width: 980px; height: 700px; margin: auto; padding-top: 15px; background-color: white; background-image: url( '<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/contentbg.jpg'); background-repeat: repeat-x;" >
+	<jdoc:include type="modules" name="topmenu" style="xhtml" />
 	
-		
+	<!-- Site Body -->
+	<div id="sitebody" class="grid-container" style="background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/bodybg.jpg'); background-repeat: repeat-x;">
+		<div class="clearfix" style="background-color: white">
+			<div style="background: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/bg-drop-shadow.png') repeat-x #FFF; height: 10px"></div>
+			<div class="breadcrumb">
+				HOME | HIGHSCHOOL | ATHLETICS | BAND
+			</div>
+			<div class="hide-on-mobile">
+				<div class="grid-25" style="height: 1000px"></div>
+				<div class="grid-75" style="height: 1000px"></div>
+			</div>
+			<div class="hide-on-desktop">
+				<div class="grid-100" style="height: 1000px"></div>
+			</div>
+		</div>
 	</div>
+	
+	
+	
+	<!--<div id="sitebody" style="clear: both; background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/bodybg.jpg'); background-repeat: repeat-x;">
+	<div id="sitebody" class="grid-container">
+		<div class="hide-on-mobile">
+			<div class="grid-25" style="background: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/contentbg.jpg') repeat-x #FFF; height: 1000px"></div>
+			<div class="grid-75" style="background: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/contentbg.jpg') repeat-x #FFF; height: 1000px"></div>
+		</div>
+		<div class="hide-on-desktop">
+			<div class="grid-100" style="background: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/contentbg.jpg') repeat-x #FFF; height: 1000px"></div>
+		</div>
 	</div>
+	</div>-->
 
 	<!-- Footer -->
-	<div id="footer" style="height: 30px; clear: both;">
-		<jdoc:include type="modules" name="footer" style="xhtml" />
+	<div id="footer" style="background: url(/templates/westsenators/images/bg-footer.png) repeat; border-top: 1px solid white; padding: 30px;">
+	<div class="grid-container">
+		<!--<jdoc:include type="modules" name="footer" style="xhtml" />-->
+		<div class="grid-33 center">
+			<img src="http://placekitten.com/g/100/100" alt="">
+		</div>
+		<div class="grid-33 center">
+			<div>
+			Washington-Nile Local Schools<br>
+			15332 US Hwy. 52<br>
+			West Portsmouth, OH 45663<br>
+			</div>
+		</div>
+		<div class="grid-33 center">
+			Jeff Stricklett, Superintendent<br>
+			Sherry Patterson, Treasurer<br>
+			phone: (740)-858-1111<br>
+			fax: (740)-858-1110<br>
+		</div>
 	</div>
-
+	<div class="grid-container">
+		<div class="copyright">
+			&copy;2014, Washinton-Nile Local Schools
+		</div>
+	</div>
+	</div>
 </body>
 </html>
-
-<!--
-<!-- Menu
-<div id="menu-wrapper" style="width: 250px; float: left;">
-	<div id="menu-top" style="height: 30px; background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/windowtopbg.jpg'); background-repeat: repeat-x; color: white;"></div>
-	<div id="menu-main" style="height: 300px; padding: 10px; background-color: white; background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/contentbg.jpg'); background-repeat: repeat-x; border-bottom: 1px solid #D41;">
-		<jdoc:include type="modules" name="leftmenu" headerLevel="3"/>
-	</div>
-</div>
-
-<!-- Content window
-<div id="content-wrapper" style="width: 715px; float: right;">
-	<div id="content-top" style="height: 30px; background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/windowtopbg.jpg'); background-repeat: repeat-x;">&nbsp;</div>
-	<div id="content-main" style="padding: 10px; background-color: white; background-image: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/contentbg.jpg'); background-repeat: repeat-x; border-bottom: 1px solid #D41;">
-		<jdoc:include type="component" />
-	</div>
-</div>
--->

@@ -50,42 +50,196 @@ table {
 /* PAGE STYLES                                              */
 /*----------------------------------------------------------*/
 body {
-	background-color: #333;
-	padding: 0px;
-	margin: 0px;
+	background: url(/templates/westsenators/images/bg-content.png) repeat;
 }
 
-#header-top {}
-#header-main {}
-
-#sitebody{}
-#wrapper{}
-
-#menu-wrapper{}
-#menu-top{}
-#menu-main{}
-
-#content-wrapper{}
-#content-top{}
-#content-main{}
-
-.hovermenu {
-	display: block;
+.center {
 	text-align: center;
-	padding-top: 10px;
+	margin: 0 auto;
 }
 
-.hovermenu li {
-	display: inline;
-	margin-left: 10px;
-	margin-right: 10px;
+.copyright {
+	font-size: small;
+	text-align: center;
+	padding: 10px 0;
 }
 
-.hovermenu a {
-	font-size: large;
-	color: white;
-	text-decoration: none;
+
+/*----------------------------------------------------------*/
+/* PRIMARY NAVIGATION BAR                                   */
+/*----------------------------------------------------------*/
+#primaryNav a:link,
+#primaryNav a:visited ,
+#primaryNav span {
+    font-size: large;
 	font-family: sans-serif;
+	color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#primaryNav a:hover,
+#primaryNav a:active,
+#primaryNav span:hover {
+	color: #4e1400;
+	-moz-transition: color 0.25s;
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    transition: color 0.25s;
+}
+
+#primaryNav {
+	background: url(/templates/westsenators/images/bg-nav.png) repeat-x;
+	text-align: center;
+}
+
+#primaryNav li {
+	background: url(/templates/westsenators/images/bg-nav-horiz-divider.png) center right no-repeat;
+	margin: 0;
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	display: inline-block;
+}
+
+#primaryNav li.last {
+	background-image: none;
+}
+
+#primaryNav li ul {
+	display: none;
+}
+
+#primaryNav li:hover ul {
+	display: block;
+	position: absolute;
+}
+
+#primaryNav li:hover ul:before{
+	display: block;
+	background: url(/templates/westsenators/images/bg-nav-shadow.png) repeat-x;
+	height: 10px;
+	content: "";
+}
+
+#primaryNav li:hover li {
+	display: block;
+	background: #dd5426 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
+}
+
+#primaryNav li:hover li.last {
+	background: #dd5426;
+	border-bottom: 1px solid #c94a1d;
+}
+
+
+/*----------------------------------------------------------*/
+/* MOBILE NAVIGATION BAR                                    */
+/*----------------------------------------------------------*/
+#mobileNav a:link,
+#mobileNav a:visited,
+#mobileNav span {
+    font-size: large;
+	font-family: sans-serif;
+	color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#mobileNav a:hover,
+#mobileNav a:active,
+#mobileNav span:active {
+	color: #4e1400;
+	-moz-transition: color 0.25s;
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    transition: color 0.25s;
+}
+
+#mobileNav {
+	display: none;
+	background-color: #dd5426;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	height: 38px;
+}
+
+#mobileNav li {
+	background: #dd5426 url(/templates/westsenators/images/bg-nav-horiz-divider.png) center right no-repeat;
+	display: inline-block;
+	width: 50%;
+	height: 36px;
+	margin: 1px 0;
+	line-height: 36px;
+	text-align: center;
+	float: left;
+}
+
+#mobileNav li.last {
+	background-image: none;
+}
+
+#mobileNav li ul {
+	display: none;
+	position: absolute;
+	left: 0;
+	margin: 2px 0 0 0;
+	width: 100%;
+	border: none;
+}
+
+#mobileNav li ul:before{
+	display: block;
+	background: url(/templates/westsenators/images/bg-nav-shadow.png) repeat-x;
+	height: 10px;
+	content: "";
+}
+
+#mobileNav li li {
+	background: #dd5426 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
+	border: none;
+	margin: 0;
+	width: 100%;
+}
+
+#mobileNav li li.last {
+	background: #dd5426;
+	border-bottom: 1px solid #c94a1d;
+}
+
+
+/*----------------------------------------------------------*/
+/* RESPONSIVE DESIGN                                        */
+/*----------------------------------------------------------*/
+
+/* Widescreen and large desktops */
+@media only screen and (max-width : 1200px) {
+	#primaryNav li{
+		padding: 0 12px;
+	}
+}
+
+/* Desktops */
+@media only screen and (max-width : 960px) {
+	#primaryNav li{
+		padding: 0 8px;
+	}
+}
+
+/* Vertical iPad and tablets */
+@media only screen and (max-width : 767px) {
+	#primaryNav {
+		display: none;
+	}
+
+	#mobileNav{
+		display: block;
+	}
+}
+
+#sitebody {
+	padding: 0px !important;
 }
 
 /*----------------------------------------------------------*/

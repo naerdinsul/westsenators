@@ -61,20 +61,26 @@
 			<!-- Breadcrumb -->
 			<div id="breadcrumb">
 				<jdoc:include type="modules" name="breadcrumb" />
-				<!--HOME | HIGHSCHOOL | ATHLETICS | BAND-->
 			</div>
 			
-			
+			<!-- Content on Desktop -->
 			<div class="hide-on-mobile">
-				<div class="grid-25" style="height: 1000px"></div>
-				<div class="grid-75" style="height: 1000px"></div>
+				<div class="grid-25" style="min-height: 100px">
+					<jdoc:include type="modules" name="leftmenu" />
+				</div>
+				
+				<div class="grid-75" style="min-height: 100px">
+					<jdoc:include type="component" />
+				</div>
 			</div>
+
+			<!-- Content on Mobile -->
 			<div class="hide-on-desktop">
-				<div class="grid-100" style="height: 1000px"></div>
+				<div class="grid-100" style="min-height: 1000px">
+					<jdoc:include type="component" />
+					<jdoc:include type="modules" name="leftmenu" />
+				</div>
 			</div>
-		
-		<!--<div class="clearfix" style="background-color: white">
-		</div>-->
 	</div>
 	
 	<!-- Footer -->
@@ -82,7 +88,7 @@
 	<div class="grid-container">
 		<!--<jdoc:include type="modules" name="footer" style="xhtml" />-->
 		<div class="grid-33 center">
-			<img src="http://placekitten.com/g/100/100" alt="">
+			<img src="/templates/westsenators/images/header-wp-logo.png" alt="" />
 		</div>
 		<div class="grid-33 center">
 			<div>

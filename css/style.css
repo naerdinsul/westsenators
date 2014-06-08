@@ -53,8 +53,13 @@ body {
 	background: url(/templates/westsenators/images/bg-content.png) repeat;
 }
 
-#header {
+#header-wrapper {
 	background: url(/templates/westsenators/images/bg-header.png) repeat;
+}
+
+#header {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 #navdropshadow {
@@ -65,6 +70,7 @@ body {
 }
 
 #sitebody {
+	background-color: white;
 	margin-top: -10px;
 }
 
@@ -227,6 +233,26 @@ body {
 
 
 /*----------------------------------------------------------*/
+/* BREADCRUMBS                                              */
+/*----------------------------------------------------------*/
+#breadcrumb {
+	margin: 20px;
+}
+
+#breadcrumb li {
+	display: inline;
+	font-family: sans-serif;
+	color: #000;
+    text-transform: uppercase;
+}
+
+#breadcrumb a {
+	text-decoration: none;
+	color: #000;
+}
+
+
+/*----------------------------------------------------------*/
 /* RESPONSIVE DESIGN                                        */
 /*----------------------------------------------------------*/
 
@@ -253,10 +279,6 @@ body {
 	#mobileNav{
 		display: block;
 	}
-}
-
-#sitebody {
-	padding: 0px !important;
 }
 
 /*----------------------------------------------------------*/

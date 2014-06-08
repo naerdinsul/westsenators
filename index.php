@@ -45,7 +45,10 @@
 <body>
 
 	<!-- Header -->
-	<div id="header" style="height: 200px">
+	<div id="header-wrapper">
+		<div id="header">
+		<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" style="margin: 20px;"></a>
+		</div>
 		<!--<jdoc:include type="modules" name="banner" style="xhtml" />-->
 	</div>
 	
@@ -55,12 +58,11 @@
 	
 	<!-- Site Body -->
 	<div id="sitebody" class="grid-container">
-		<div class="clearfix" style="background-color: white">
 			<!-- Breadcrumb -->
-			<!--<div class="breadcrumb">
+			<div id="breadcrumb">
 				<jdoc:include type="modules" name="breadcrumb" />
 				<!--HOME | HIGHSCHOOL | ATHLETICS | BAND-->
-			<!--</div>-->
+			</div>
 			
 			
 			<div class="hide-on-mobile">
@@ -70,7 +72,9 @@
 			<div class="hide-on-desktop">
 				<div class="grid-100" style="height: 1000px"></div>
 			</div>
-		</div>
+		
+		<!--<div class="clearfix" style="background-color: white">
+		</div>-->
 	</div>
 	
 	<!-- Footer -->

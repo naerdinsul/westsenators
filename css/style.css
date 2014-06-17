@@ -239,6 +239,21 @@ body {
 /*----------------------------------------------------------*/
 #breadcrumb {
 	margin: 20px;
+	padding-left: 18px;
+	background: url(../images/icon-home.png) no-repeat 1px 1px;
+}
+
+#breadcrumb .pathway {
+	color: #dd5426;
+}
+
+#breadcrumb .pathway:hover {
+	text-decoration: underline;
+}
+
+#breadcrumb .divider {
+	background: none;
+	content: ">";
 }
 
 #breadcrumb li {

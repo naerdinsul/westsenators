@@ -50,11 +50,11 @@ table {
 /* PAGE STYLES                                              */
 /*----------------------------------------------------------*/
 body {
-	background: url(/templates/westsenators/images/bg-content.png) repeat;
+	background: url(../images/bg-content.png) repeat;
 }
 
 #header-wrapper {
-	background: url(/templates/westsenators/images/bg-header.png) repeat;
+	background: url(../images/bg-header.png) repeat;
 }
 
 #header {
@@ -63,9 +63,9 @@ body {
 }
 
 #navdropshadow {
-	background: url(/templates/westsenators/images/bg-drop-shadow.png) repeat-x;
+	background: url(../images/bg-drop-shadow.png) repeat-x;
 	position: relative;
-	z-index: 10px;
+	z-index: 10;
 	height: 10px;
 }
 
@@ -110,17 +110,18 @@ body {
 }
 
 #primaryNav {
-	background: url(/templates/westsenators/images/bg-nav.png) repeat-x;
+	background: url(../images/bg-nav.png) repeat-x;
 	text-align: center;
 }
 
 #primaryNav li {
-	background: url(/templates/westsenators/images/bg-nav-horiz-divider.png) center right no-repeat;
+	background: url(../images/bg-nav-horiz-divider.png) center right no-repeat;
 	margin: 0;
 	padding: 0 20px;
 	height: 40px;
 	line-height: 40px;
 	text-align: left;
+	cursor: default;
 	display: inline-block;
 }
 
@@ -140,14 +141,14 @@ body {
 
 #primaryNav li:hover ul:before{
 	display: block;
-	background: url(/templates/westsenators/images/bg-nav-shadow.png) repeat-x;
+	background: url(../images/bg-nav-shadow.png) repeat-x;
 	height: 10px;
 	content: "";
 }
 
 #primaryNav li:hover li {
 	display: block;
-	background: #dd5426 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
+	background: #dd5426 url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 }
 
 #primaryNav li:hover li.last {
@@ -188,13 +189,14 @@ body {
 }
 
 #mobileNav li {
-	background: #dd5426 url(/templates/westsenators/images/bg-nav-horiz-divider.png) center right no-repeat;
+	background: #dd5426 url(../images/bg-nav-horiz-divider.png) center right no-repeat;
 	display: inline-block;
 	width: 50%;
 	height: 36px;
 	margin: 1px 0;
 	line-height: 36px;
 	text-align: center;
+	cursor: pointer;
 	float: left;
 }
 
@@ -214,13 +216,13 @@ body {
 
 #mobileNav li ul:before{
 	display: block;
-	background: url(/templates/westsenators/images/bg-nav-shadow.png) repeat-x;
+	background: url(../images/bg-nav-shadow.png) repeat-x;
 	height: 10px;
 	content: "";
 }
 
 #mobileNav li li {
-	background: #dd5426 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
+	background: #dd5426 url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 	border: none;
 	margin: 0;
 	width: 100%;

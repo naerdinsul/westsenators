@@ -106,7 +106,7 @@
 	</div>
 	<div class="grid-container">
 		<div class="copyright">
-			&copy;2014, Washinton-Nile Local Schools
+			&copy;2014, Washington-Nile Local Schools
 		</div>
 	</div>
 	</div>

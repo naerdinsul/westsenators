@@ -19,6 +19,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	font-family: sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -51,6 +52,15 @@ table {
 /*----------------------------------------------------------*/
 body {
 	background: url(../images/bg-content.png) repeat;
+}
+
+a {
+	text-decoration: none;
+	color: #dd5426;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 #header-wrapper {
@@ -93,7 +103,7 @@ body {
 #primaryNav a:visited ,
 #primaryNav span {
     font-size: large;
-	font-family: sans-serif;
+	/*font-family: sans-serif;*/
 	color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -164,7 +174,7 @@ body {
 #mobileNav a:visited,
 #mobileNav span {
     font-size: large;
-	font-family: sans-serif;
+	/*font-family: sans-serif;*/
 	color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -258,14 +268,9 @@ body {
 
 #breadcrumb li {
 	display: inline;
-	font-family: sans-serif;
+	/*font-family: sans-serif;*/
 	color: #000;
     text-transform: uppercase;
-}
-
-#breadcrumb a {
-	text-decoration: none;
-	color: #000;
 }
 
 
@@ -278,6 +283,57 @@ body {
 	height: 30px;
 	text-decoration: none;
 	color: black;
+}
+
+/*----------------------------------------------------------*/
+/* LAYOUT STYLES                                            */
+/*----------------------------------------------------------*/
+.item {
+	clear: both;
+	margin-bottom: 30px;
+}
+
+.page-header {
+	background: #DD5426 url('../images/bg-nav.png') repeat-x;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+.page-header a {
+	color: white;
+	text-decoration: none;
+}
+
+.westsenators-post-date:before {
+	content: url('../images/icon-calendar.png');
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+	line-height: 0;
+	bottom: auto;
+}
+
+.westsenators-post-date {
+	margin-right: 7px;
+}
+
+.westsenators-post-by:before {
+	content: url('../images/icon-user.png');
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+	line-height: 0;
+	bottom: auto;
+}
+
+.westsenators-post-by {
+	margin-right: 7px;
+}
+
+.item p {
+	padding-top: 15px;
 }
 
 /*----------------------------------------------------------*/
@@ -315,7 +371,7 @@ body {
 h1,h2,h3,h4,h5,h6 {
 	margin: 9px 0;
 	font-family: inherit;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	line-height: 1;
 	color: inherit;
 	text-rendering: optimizelegibility;

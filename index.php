@@ -1,28 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+
+defined('_JEXEC') or die;
+
+$app             = JFactory::getApplication();
+$doc             = JFactory::getDocument();
+$user            = JFactory::getUser();
+$this->language  = $doc->language;
+$this->direction = $doc->direction;
+
+// Include CSS Stylesheets
+$doc->addStyleSheet( $this->baseurl . '/templates/' . $this->template . '/css/style.css');
+$doc->addStyleSheet( $this->baseurl . '/templates/' . $this->template . '/css/unsemantic-grid-responsive.css');
+
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-	<?php
-	$app = JFactory::getApplication();
-	$this->setTitle(  $app->getCfg( 'sitename' ) . ' - ' . $this->getTitle());
-	?>
+<jdoc:include type="head" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/style.css" type="text/css">
-	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/unsemantic-grid-responsive.css" type="text/css">
 
-	<!-- Nivo Slider -->
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
-	<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery-1.9.0.min.js"></script>
-    <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery.nivo.slider.pack.js"></script>
-    <script type="text/javascript">
-	/*$j = jQuery.noConflict();
-    $j(window).load(function() {
-		$j('#slider').nivoSlider({
-			directionNav: false,
-			controlNav: false
-		});
-    });*/
-    </script>
-	
 	<!-- JQuery functions -->
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -39,17 +34,16 @@
 			});
 		});
     </script>
-	<jdoc:include type="head" />
 </head>
 
 <body>
 
 	<!-- Header -->
 	<div id="header-wrapper">
+		<jdoc:include type="modules" name="header" style="xhtml" />
 		<div id="header">
 		<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" style="margin: 20px;"></a>
 		</div>
-		<!--<jdoc:include type="modules" name="banner" style="xhtml" />-->
 	</div>
 	
 	<!-- Navigation Menu -->

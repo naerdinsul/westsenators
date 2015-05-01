@@ -31,7 +31,6 @@
 		<position>navmenu</position>
 		<position>breadcrumb</position>
 		<position>leftmenu</position>
-		<position>content</position>
 		<position>footer</position>
 	</positions>
 

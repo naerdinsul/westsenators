@@ -51,7 +51,7 @@ table {
 /* PAGE STYLES                                              */
 /*----------------------------------------------------------*/
 body {
-	background: url(../images/bg-content.png) repeat;
+	background: rgb(190,190,190) url(/templates/westsenators/images/bg-footer.png) repeat;
 }
 
 a {
@@ -64,7 +64,7 @@ a:hover {
 }
 
 #header-wrapper {
-	background: url(../images/bg-header.png) repeat;
+	background: url(/templates/westsenators/images/bg-header.png) repeat;
 }
 
 #header {
@@ -73,15 +73,20 @@ a:hover {
 }
 
 #navdropshadow {
-	background: url(../images/bg-drop-shadow.png) repeat-x;
+	background: url(/templates/westsenators/images/bg-drop-shadow.png) repeat-x;
 	position: relative;
-	z-index: 10;
+	z-index: 10px;
 	height: 10px;
 }
 
 #sitebody {
 	background-color: white;
 	margin-top: -10px;
+	margin-bottom: 30px;
+}
+
+#footer {
+	background: url(/templates/westsenators/images/bg-content.png) repeat;
 }
 
 .center {
@@ -95,6 +100,20 @@ a:hover {
 	padding: 10px 0;
 }
 
+#alertbar {
+	color: #fff;
+    background: #d02525;
+	border-bottom: white 1px solid;
+	padding: 20px;
+    text-align: center;
+    line-height: 1.5;
+	font-size: large;
+    overflow: hidden; 
+    -webkit-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:    inset 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow:         inset 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
 
 /*----------------------------------------------------------*/
 /* PRIMARY NAVIGATION BAR                                   */
@@ -103,7 +122,7 @@ a:hover {
 #primaryNav a:visited ,
 #primaryNav span {
     font-size: large;
-	/*font-family: sans-serif;*/
+	font-family: sans-serif;
 	color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -120,18 +139,17 @@ a:hover {
 }
 
 #primaryNav {
-	background: url(../images/bg-nav.png) repeat-x;
+	background: url(/templates/westsenators/images/bg-nav.png) repeat-x;
 	text-align: center;
 }
 
 #primaryNav li {
-	background: url(../images/bg-nav-horiz-divider.png) center right no-repeat;
+	background: url(/templates/westsenators/images/bg-nav-horiz-divider.png) center right no-repeat;
 	margin: 0;
 	padding: 0 20px;
 	height: 40px;
 	line-height: 40px;
 	text-align: left;
-	cursor: default;
 	display: inline-block;
 }
 
@@ -151,14 +169,14 @@ a:hover {
 
 #primaryNav li:hover ul:before{
 	display: block;
-	background: url(../images/bg-nav-shadow.png) repeat-x;
+	background: url(/templates/westsenators/images/bg-nav-shadow.png) repeat-x;
 	height: 10px;
 	content: "";
 }
 
 #primaryNav li:hover li {
 	display: block;
-	background: #dd5426 url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x;
+	background: #dd5426 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 }
 
 #primaryNav li:hover li.last {
@@ -174,7 +192,7 @@ a:hover {
 #mobileNav a:visited,
 #mobileNav span {
     font-size: large;
-	/*font-family: sans-serif;*/
+	font-family: sans-serif;
 	color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -199,14 +217,13 @@ a:hover {
 }
 
 #mobileNav li {
-	background: #dd5426 url(../images/bg-nav-horiz-divider.png) center right no-repeat;
+	background: #dd5426 url(/templates/westsenators/images/bg-nav-horiz-divider.png) center right no-repeat;
 	display: inline-block;
 	width: 50%;
 	height: 36px;
 	margin: 1px 0;
 	line-height: 36px;
 	text-align: center;
-	cursor: pointer;
 	float: left;
 }
 
@@ -226,13 +243,13 @@ a:hover {
 
 #mobileNav li ul:before{
 	display: block;
-	background: url(../images/bg-nav-shadow.png) repeat-x;
+	background: url(/templates/westsenators/images/bg-nav-shadow.png) repeat-x;
 	height: 10px;
 	content: "";
 }
 
 #mobileNav li li {
-	background: #dd5426 url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x;
+	background: #dd5426 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 	border: none;
 	margin: 0;
 	width: 100%;
@@ -247,26 +264,26 @@ a:hover {
 /*----------------------------------------------------------*/
 /* BREADCRUMBS                                              */
 /*----------------------------------------------------------*/
-#breadcrumb {
+.breadcrumb {
 	margin: 20px;
 	padding-left: 18px;
 	background: url(../images/icon-home.png) no-repeat 1px 1px;
 }
 
-#breadcrumb .pathway {
+.breadcrumb .pathway {
 	color: #dd5426;
 }
 
-#breadcrumb .pathway:hover {
+.breadcrumb .pathway:hover {
 	text-decoration: underline;
 }
 
-#breadcrumb .divider {
+.breadcrumb .divider {
 	background: none;
 	content: ">";
 }
 
-#breadcrumb li {
+.breadcrumb li {
 	display: inline;
 	/*font-family: sans-serif;*/
 	color: #000;
@@ -371,7 +388,7 @@ a:hover {
 h1,h2,h3,h4,h5,h6 {
 	margin: 9px 0;
 	font-family: inherit;
-	/*font-weight: bold;*/
+	font-weight: bold;
 	line-height: 1;
 	color: inherit;
 	text-rendering: optimizelegibility;

@@ -6,9 +6,7 @@
 	<creationDate>2/1/2013</creationDate>
 	<author>William Deacon</author>
 	<authorEmail>william.deacon@scoca.org</authorEmail>
-	<authorUrl>http://www.west.k12.oh.us/</authorUrl>
-	<copyright></copyright>
-	<license></license>
+	<authorUrl>http://www.westsenators.org/</authorUrl>
 	<description>Joomla! 3.0 template designed for the Washington-Nile Local School District.</description>
 
 	<files>
@@ -27,11 +25,15 @@
 	</files>
 
 	<positions>
-		<position>header</position>
-		<position>navmenu</position>
-		<position>breadcrumb</position>
-		<position>leftmenu</position>
-		<position>footer</position>
+		<position>notification-position</position>
+		<position>header-position</position>
+		<position>top-position</position>
+		<position>left-position</position>
+		<position>bottom-position</position>
+		<position>debug-position</position>
 	</positions>
+	
+	<config>
+	</config>
 
 </extension>

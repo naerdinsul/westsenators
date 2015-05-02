@@ -96,6 +96,7 @@ a:hover {
 #content {
 	background-color: white;
 	margin-top: -10px;
+	padding-bottom: 20px;
 }
 
 #footer {
@@ -265,7 +266,7 @@ a:hover {
 /* BREADCRUMBS                                              */
 /*----------------------------------------------------------*/
 .breadcrumb {
-	background: url(../images/icon-home.png) no-repeat 1px 1px;
+	background: url(../images/icon-home.png) no-repeat 0px 4px;
 	padding-left: 18px;
 	line-height: 1.5em;
 	border-bottom: dotted 1px black;
@@ -355,7 +356,7 @@ a:hover {
 }
 
 /*----------------------------------------------------------*/
-/* RESPONSIVE DESIGN                                        */
+/* RESPONSIVE DESIGN ADJUSTMENTS                            */
 /*----------------------------------------------------------*/
 
 /* Widescreen and large desktops */
@@ -370,6 +371,7 @@ a:hover {
 	#primaryNav li{
 		padding: 0 8px;
 	}
+
 }
 
 /* Vertical iPad and tablets */
@@ -378,8 +380,12 @@ a:hover {
 		display: none;
 	}
 
-	#mobileNav{
+	#mobileNav {
 		display: block;
+	}
+
+	#copyright {
+		margin-bottom: 0;
 	}
 }
 

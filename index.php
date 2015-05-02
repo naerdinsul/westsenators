@@ -42,6 +42,13 @@ $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1, minimum-sca
 		<jdoc:include type="modules" name="mainmenu" />
 	</div>
 	<?php endif; ?>
+	
+	<!-- MOBILEMENU -->
+	<?php if($this->countModules( 'mobilemenu' )) : ?>
+	<div id="mobilemenu">
+		<jdoc:include type="modules" name="mobilemenu" />
+	</div>
+	<?php endif; ?>
 
 	<!-- DROPSHADOW -->
 	<div id="dropshadow"></div>

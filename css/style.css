@@ -119,9 +119,9 @@ a:hover {
 /*----------------------------------------------------------*/
 /* PRIMARY NAVIGATION BAR                                   */
 /*----------------------------------------------------------*/
-#primaryNav a:link,
-#primaryNav a:visited ,
-#primaryNav span {
+#mainmenu a:link,
+#mainmenu a:visited ,
+#mainmenu span {
     font-size: large;
 	font-family: sans-serif;
 	color: #fff;
@@ -129,9 +129,9 @@ a:hover {
     text-transform: uppercase;
 }
 
-#primaryNav a:hover,
-#primaryNav a:active,
-#primaryNav span:hover {
+#mainmenu a:hover,
+#mainmenu a:active,
+#mainmenu span:hover {
 	color: #4e1400;
 	-moz-transition: color 0.25s;
     -webkit-transition: color 0.25s;
@@ -139,12 +139,12 @@ a:hover {
     transition: color 0.25s;
 }
 
-#primaryNav {
+#mainmenu {
 	background: url(/templates/westsenators/images/bg-nav.png) repeat-x;
 	text-align: center;
 }
 
-#primaryNav li {
+#mainmenu li {
 	background: url(/templates/westsenators/images/bg-nav-horiz-divider.png) center right no-repeat;
 	margin: 0;
 	padding: 0 20px;
@@ -154,33 +154,33 @@ a:hover {
 	display: inline-block;
 }
 
-#primaryNav li.last {
+#mainmenu li.last {
 	background-image: none;
 }
 
-#primaryNav li ul {
+#mainmenu li ul {
 	display: none;
 }
 
-#primaryNav li:hover ul {
+#mainmenu li:hover ul {
 	display: block;
 	position: absolute;
 	z-index: 20;
 }
 
-#primaryNav li:hover ul:before{
+#mainmenu li:hover ul:before{
 	display: block;
 	background: url(/templates/westsenators/images/bg-nav-shadow.png) repeat-x;
 	height: 10px;
 	content: "";
 }
 
-#primaryNav li:hover li {
+#mainmenu li:hover li {
 	display: block;
 	background: #dd5426 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 }
 
-#primaryNav li:hover li.last {
+#mainmenu li:hover li.last {
 	background: #dd5426;
 	border-bottom: 1px solid #c94a1d;
 }
@@ -189,9 +189,9 @@ a:hover {
 /*----------------------------------------------------------*/
 /* MOBILE NAVIGATION BAR                                    */
 /*----------------------------------------------------------*/
-#mobileNav a:link,
-#mobileNav a:visited,
-#mobileNav span {
+#mobilemenu a:link,
+#mobilemenu a:visited,
+#mobilemenu span {
     font-size: large;
 	font-family: sans-serif;
 	color: #fff;
@@ -199,9 +199,9 @@ a:hover {
     text-transform: uppercase;
 }
 
-#mobileNav a:hover,
-#mobileNav a:active,
-#mobileNav span:active {
+#mobilemenu a:hover,
+#mobilemenu a:active,
+#mobilemenu span:active {
 	color: #4e1400;
 	-moz-transition: color 0.25s;
     -webkit-transition: color 0.25s;
@@ -209,7 +209,7 @@ a:hover {
     transition: color 0.25s;
 }
 
-#mobileNav {
+#mobilemenu {
 	display: none;
 	background-color: #dd5426;
 	border-top: 1px solid white;
@@ -217,7 +217,7 @@ a:hover {
 	height: 38px;
 }
 
-#mobileNav li {
+#mobilemenu li {
 	background: #dd5426 url(/templates/westsenators/images/bg-nav-horiz-divider.png) center right no-repeat;
 	display: inline-block;
 	width: 50%;
@@ -228,11 +228,11 @@ a:hover {
 	float: left;
 }
 
-#mobileNav li.last {
+#mobilemenu li.last {
 	background-image: none;
 }
 
-#mobileNav li ul {
+#mobilemenu li ul {
 	display: none;
 	position: absolute;
 	left: 0;
@@ -242,21 +242,21 @@ a:hover {
 	z-index: 20;
 }
 
-#mobileNav li ul:before{
+#mobilemenu li ul:before{
 	display: block;
 	background: url(/templates/westsenators/images/bg-nav-shadow.png) repeat-x;
 	height: 10px;
 	content: "";
 }
 
-#mobileNav li li {
+#mobilemenu li li {
 	background: #dd5426 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 	border: none;
 	margin: 0;
 	width: 100%;
 }
 
-#mobileNav li li.last {
+#mobilemenu li li.last {
 	background: #dd5426;
 	border-bottom: 1px solid #c94a1d;
 }
@@ -361,14 +361,14 @@ a:hover {
 
 /* Widescreen and large desktops */
 @media only screen and (max-width : 1200px) {
-	#primaryNav li{
+	#mainmenu li{
 		padding: 0 12px;
 	}
 }
 
 /* Desktops */
 @media only screen and (max-width : 960px) {
-	#primaryNav li{
+	#mainmenu li{
 		padding: 0 8px;
 	}
 
@@ -376,11 +376,11 @@ a:hover {
 
 /* Vertical iPad and tablets */
 @media only screen and (max-width : 767px) {
-	#primaryNav {
+	#mainmenu {
 		display: none;
 	}
 
-	#mobileNav {
+	#mobilemenu {
 		display: block;
 	}
 

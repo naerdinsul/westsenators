@@ -156,6 +156,8 @@ a:hover {
 	line-height: 40px;
 	text-align: left;
 	display: inline-block;
+	cursor: pointer;
+	cursor: hand;
 }
 
 #mainmenu li.last {
@@ -169,6 +171,8 @@ a:hover {
 #mainmenu li:hover ul {
 	display: block;
 	position: absolute;
+	margin-top: -1px;
+	margin-left: -20px;
 	z-index: 20;
 }
 
@@ -226,10 +230,11 @@ a:hover {
 	display: inline-block;
 	width: 50%;
 	height: 36px;
-	margin: 1px 0;
 	line-height: 36px;
 	text-align: center;
 	float: left;
+	cursor: pointer;
+	cursor: hand;
 }
 
 #mobilemenu li.last {
@@ -240,7 +245,7 @@ a:hover {
 	display: none;
 	position: absolute;
 	left: 0;
-	margin: 2px 0 0 0;
+	margin: 1px 0 0 0;
 	width: 100%;
 	border: none;
 	z-index: 20;

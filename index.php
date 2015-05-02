@@ -15,6 +15,27 @@ $doc->addStyleSheet( 'templates/' . $this->template . '/css/simplegrid.css' );
 $doc->addStyleSheet( 'templates/' . $this->template . '/css/style.css' );
 $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' );
 
+// Load JQuery
+//JHtml::_('jquery.framework');
+
+$doc->addScriptDeclaration('
+
+	/* Toggle mobile menu selections */
+	jQuery(document).ready(function() {
+		jQuery("#mobilemenu ul").children("li").each(function() {
+			jQuery(this).click(function() {
+				/* Hide everything */
+				jQuery("#mobilemenu ul").children("li").not(this).children("ul").each(function() {
+					jQuery(this).hide();
+				});
+			
+				/* Toggle the currently clicked item */
+				jQuery(this).children("ul").toggle();
+			});
+		});
+	});
+');
+
 ?><!DOCTYPE html>
 <html>
 <head>

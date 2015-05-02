@@ -15,9 +15,7 @@ $doc->addStyleSheet( 'templates/' . $this->template . '/css/simplegrid.css' );
 $doc->addStyleSheet( 'templates/' . $this->template . '/css/style.css' );
 $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' );
 
-// Load JQuery
-//JHtml::_('jquery.framework');
-
+// Include extra Javascript
 $doc->addScriptDeclaration('
 
 	/* Toggle mobile menu selections */
@@ -43,14 +41,21 @@ $doc->addScriptDeclaration('
 </head>
 
 <body>
+	<?php if($this->countModules( 'notification' )) : ?>
+	<!-- NOTIFICATION SECTION -->
 	<jdoc:include type="modules" name="notification" />
+	<?php endif; ?>
 
 	<!-- HEADER SECTION -->
 	<div id="header">
 		<div class="grid">
 			<!-- WNLS LOGO -->
-			<div class="logo-full">
-				<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" style="margin: 20px;"></a>
+			<div class="logo-full grid">
+				<div class="col-1-2">
+					<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" style="margin: 20px;"></a>
+				</div>
+				<div class="col-1-2">
+				</div>
 			</div>
 			<div class="logo-mobile center">
 				<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" style="margin: 20px;"></a>
@@ -133,8 +138,9 @@ $doc->addScriptDeclaration('
 				</address>
 			</div>
 			<div class="col-1-3 center">
-				phone: (740)-858-1111<br>
-				fax: (740)-858-1110<br>
+				Phone: (740)-858-1111<br>
+				Fax: (740)-858-1110<br>
+				Email: <a href="mailto:contact@westsenators.org">contact@westsenators.org</a><br>
 			</div>
 		</div>
 	</div>

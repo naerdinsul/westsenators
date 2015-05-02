@@ -67,6 +67,25 @@ a:hover {
 	text-align: center;
 }
 
+.nav li {
+	text-transform: uppercase;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.pull-right.item-image {
+	margin: 0 0 18px 20px;
+}
+.pull-left.item-image {
+	margin: 0 20px 18px 0;
+}
+
 .logo-mobile {
 	display: none;
 }
@@ -296,11 +315,9 @@ a:hover {
 
 .breadcrumb li {
 	display: inline;
-	/*font-family: sans-serif;*/
 	color: #000;
     text-transform: uppercase;
 }
-
 
 /*----------------------------------------------------------*/
 /* SCHOOLS MENU                                             */

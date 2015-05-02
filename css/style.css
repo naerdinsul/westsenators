@@ -63,41 +63,8 @@ a:hover {
 	text-decoration: underline;
 }
 
-#header-wrapper {
-	background: url(/templates/westsenators/images/bg-header.png) repeat;
-}
-
-#header {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
-#navdropshadow {
-	background: url(/templates/westsenators/images/bg-drop-shadow.png) repeat-x;
-	position: relative;
-	z-index: 10px;
-	height: 10px;
-}
-
-#sitebody {
-	background-color: white;
-	margin-top: -10px;
-	margin-bottom: 30px;
-}
-
-#footer {
-	background: url(/templates/westsenators/images/bg-content.png) repeat;
-}
-
 .center {
 	text-align: center;
-	margin: 0 auto;
-}
-
-.copyright {
-	font-size: small;
-	text-align: center;
-	padding: 10px 0;
 }
 
 #alertbar {
@@ -114,6 +81,39 @@ a:hover {
     box-shadow:         inset 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
+#header {
+	background: url(/templates/westsenators/images/bg-header.png) repeat;
+}
+
+#dropshadow {
+	background: url(/templates/westsenators/images/bg-drop-shadow.png) repeat-x;
+	position: relative;
+	z-index: 10;
+	height: 10px;
+	
+}
+
+#content {
+	background-color: white;
+	margin-top: -10px;
+}
+
+#footer {
+	background: url(/templates/westsenators/images/bg-content.png) repeat;
+	padding-bottom: 20px;
+	color: white;
+	line-height: 1.2em;
+}
+
+#copyright {
+	background-color: rgb( 23, 23, 23 );
+	color: white;
+	line-height: 1.2em;
+	font-size: small;
+	text-align: center;
+	padding: 10px 0;
+	margin-bottom: 30px;
+}
 
 /*----------------------------------------------------------*/
 /* PRIMARY NAVIGATION BAR                                   */
@@ -265,9 +265,10 @@ a:hover {
 /* BREADCRUMBS                                              */
 /*----------------------------------------------------------*/
 .breadcrumb {
-	margin: 20px;
-	padding-left: 18px;
 	background: url(../images/icon-home.png) no-repeat 1px 1px;
+	padding-left: 18px;
+	line-height: 1.5em;
+	border-bottom: dotted 1px black;
 }
 
 .breadcrumb .pathway {

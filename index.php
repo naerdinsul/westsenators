@@ -54,12 +54,12 @@ $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1, minimum-sca
 		<div class="grid grid-pad">
 			<?php if($this->countModules( 'left-position' )) : ?>
 			<!-- LEFT CONTENT SECTION -->
-			<div class="col-3-12">
+			<div class="col-4-12">
 				<jdoc:include type="modules" name="left-position" />
 			</div>
 			
 			<!-- MAIN CONTENT SECTION -->
-			<div class="col-9-12">			
+			<div class="col-8-12">
 			<?php else: ?>
 			<div class="col-1-1">
 			<?php endif; ?>

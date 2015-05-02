@@ -59,19 +59,21 @@ $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1, minimum-sca
 		<?php endif; ?>
 		
 		<div class="grid grid-pad">
+			<!-- MAIN CONTENT SECTION -->
 			<?php if($this->countModules( 'user-left' )) : ?>
+			<div class="col-8-12 push-right">
+				<jdoc:include type="component" />
+			</div>
+
 			<!-- LEFT CONTENT SECTION -->
 			<div class="col-4-12">
 				<jdoc:include type="modules" name="user-left" style="xhtml" />
-			</div>
-			
-			<!-- MAIN CONTENT SECTION -->
-			<div class="col-8-12">
+			</div>	
 			<?php else: ?>
 			<div class="col-1-1">
-			<?php endif; ?>
 				<jdoc:include type="component" />
 			</div>
+			<?php endif; ?>
 		</div>
 		
 		<?php if($this->countModules( 'user-bottom' )) : ?>

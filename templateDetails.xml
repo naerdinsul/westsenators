@@ -25,12 +25,13 @@
 	</files>
 
 	<positions>
-		<position>notification-position</position>
-		<position>header-position</position>
-		<position>top-position</position>
-		<position>left-position</position>
-		<position>bottom-position</position>
-		<position>debug-position</position>
+		<position>notification</position>
+		<position>header</position>
+		<position>mainmenu</position>
+		<position>user-top</position>
+		<position>user-left</position>
+		<position>user-bottom</position>
+		<position>debug</position>
 	</positions>
 	
 	<config>

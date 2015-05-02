@@ -28,7 +28,12 @@ $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1, minimum-sca
 	<div id="header">
 		<div class="grid">
 			<!-- WNLS LOGO -->
-			<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" style="margin: 20px;"></a>
+			<div class="logo-full">
+				<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" style="margin: 20px;"></a>
+			</div>
+			<div class="logo-mobile center">
+				<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" style="margin: 20px;"></a>
+			</div>
 			<!-- Other stuff would go here -->
 		</div>
 		

@@ -67,6 +67,10 @@ a:hover {
 	text-align: center;
 }
 
+.logo-mobile {
+	display: none;
+}
+
 #alertbar {
 	color: #fff;
     background: #d02525;
@@ -371,7 +375,6 @@ a:hover {
 	#mainmenu li{
 		padding: 0 8px;
 	}
-
 }
 
 /* Vertical iPad and tablets */
@@ -386,6 +389,17 @@ a:hover {
 
 	#copyright {
 		margin-bottom: 0;
+	}
+}
+
+/* Vertical cell phones */
+@media only screen and (max-width : 480px) {
+	.logo-full {
+		display: none;
+	}
+	
+	.logo-mobile {
+		display: block;
 	}
 }
 

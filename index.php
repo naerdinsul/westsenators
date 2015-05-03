@@ -20,10 +20,10 @@ $doc->addScriptDeclaration('
 
 	/* Toggle mobile menu selections */
 	jQuery(document).ready(function() {
-		jQuery("#mobilemenu ul").children("li").each(function() {
+		jQuery(".mobilemenu ul").children("li").each(function() {
 			jQuery(this).click(function() {
 				/* Hide everything */
-				jQuery("#mobilemenu ul").children("li").not(this).children("ul").each(function() {
+				jQuery(".mobilemenu ul").children("li").not(this).children("ul").each(function() {
 					jQuery(this).hide();
 				});
 			
@@ -47,18 +47,18 @@ $doc->addScriptDeclaration('
 	<?php endif; ?>
 
 	<!-- HEADER SECTION -->
-	<div id="header">
+	<div class="header">
 		<div class="grid">
 			<!-- WNLS LOGO -->
-			<div class="logo-full grid">
+			<div class="logo logo-full grid">
 				<div class="col-1-2">
-					<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" style="margin: 20px;"></a>
+					<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" alt="Portsmouth West Dome logo"></a>
 				</div>
 				<div class="col-1-2">
 				</div>
 			</div>
-			<div class="logo-mobile center">
-				<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" style="margin: 20px;"></a>
+			<div class="logo logo-mobile center">
+				<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" alt="Portsmouth West Dome logo"></a>
 			</div>
 			<!-- Other stuff would go here -->
 		</div>
@@ -69,23 +69,23 @@ $doc->addScriptDeclaration('
 	
 	<!-- MAINMENU -->
 	<?php if($this->countModules( 'mainmenu' )) : ?>
-	<div id="mainmenu">
+	<div class="horiznav mainmenu">
 		<jdoc:include type="modules" name="mainmenu" />
 	</div>
 	<?php endif; ?>
 	
 	<!-- MOBILEMENU -->
 	<?php if($this->countModules( 'mobilemenu' )) : ?>
-	<div id="mobilemenu">
+	<div class="horiznav mobilemenu">
 		<jdoc:include type="modules" name="mobilemenu" />
 	</div>
 	<?php endif; ?>
 
 	<!-- DROPSHADOW -->
-	<div id="dropshadow"></div>
+	<div class="dropshadow"></div>
 
 	<!-- CONTENT SECTION -->	
-	<div id="content" class="grid">
+	<div class="grid content">
 		
 		<?php if($this->countModules( 'user-top' )) : ?>
 		<!-- TOP CONTENT SECTION -->
@@ -125,10 +125,10 @@ $doc->addScriptDeclaration('
 	</div>
 	
 	<!-- FOOTER SECTION -->
-	<div id="footer" class="grid">
+	<div class="grid footer">
 		<div class="grid grid-pad">
 			<div class="col-1-3 center">
-				<img src="/templates/westsenators/images/wp-logo-small.png" alt="Porstmouth West logo" />
+				<img src="/templates/westsenators/images/wp-logo-small.png" alt="Porstmouth West WP logo">
 			</div>
 			<div class="col-1-3 center">
 				<address>
@@ -144,7 +144,7 @@ $doc->addScriptDeclaration('
 			</div>
 		</div>
 	</div>
-	<div id="copyright" class="grid">
+	<div class="grid copyright">
 		&copy; <?php echo date('Y'); ?> <?php echo $sitename; ?>
 	</div>
 

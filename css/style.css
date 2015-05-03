@@ -1,7 +1,7 @@
 /*----------------------------------------------------------*/
 /* STANDARD COLOR SCHEME FOR WNLS                           */
 /*----------------------------------------------------------*/
-/* Oranges:                  Blacks:                        */
+/*                                                          */
 
 
 
@@ -94,6 +94,10 @@ a:hover {
 }
 .pull-left.item-image {
 	margin: 0 20px 18px 0;
+}
+
+.logo img {
+	padding: 20px;
 }
 
 .logo-mobile {

@@ -52,13 +52,13 @@ $doc->addScriptDeclaration('
 			<!-- WNLS LOGO -->
 			<div class="logo logo-full grid">
 				<div class="col-1-2">
-					<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" alt="Portsmouth West Dome logo"></a>
+					<a href="/"><img src="/templates/westsenators/images/dome-logo-small.png" alt="Portsmouth West Dome logo"></a>
 				</div>
 				<div class="col-1-2">
 				</div>
 			</div>
 			<div class="logo logo-mobile center">
-				<a href="/"><img src="/templates/westsenators/images/header-wp-logo.png" alt="Portsmouth West Dome logo"></a>
+				<a href="/"><img src="/templates/westsenators/images/dome-logo-small.png" alt="Portsmouth West Dome logo"></a>
 			</div>
 			<!-- Other stuff would go here -->
 		</div>
@@ -126,18 +126,18 @@ $doc->addScriptDeclaration('
 	
 	<!-- FOOTER SECTION -->
 	<div class="grid footer">
-		<div class="grid grid-pad">
+		<div class="grid">
 			<div class="col-1-3 center">
 				<img src="/templates/westsenators/images/wp-logo-small.png" alt="Porstmouth West WP logo">
 			</div>
-			<div class="col-1-3 center">
+			<div class="col-1-3 center" style="padding-top: 20px;">
 				<address>
 					Washington-Nile Local Schools<br>
 					15332 US Hwy. 52<br>
 					West Portsmouth, OH 45663<br>
 				</address>
 			</div>
-			<div class="col-1-3 center">
+			<div class="col-1-3 center" style="padding-top: 20px;">
 				Phone: (740)-858-1111<br>
 				Fax: (740)-858-1110<br>
 				Email: <a href="mailto:contact@westsenators.org">contact@westsenators.org</a><br>

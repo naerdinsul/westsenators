@@ -1,9 +1,12 @@
 /*----------------------------------------------------------*/
 /* STANDARD COLOR SCHEME FOR WNLS                           */
 /*----------------------------------------------------------*/
-/*                                                          */
-
-
+/* X-Light Orange: #FF9E7A                                  */
+/* Light Orange:   #EC784D                                  */
+/* Base Orange:    #DD5522                                  */
+/* Dark Orange:    #B03B10                                  */
+/* X-Dark Orange:  #892500                                  */
+/*----------------------------------------------------------*/
 
 /*----------------------------------------------------------*/
 /* CSS RESET                                                */
@@ -58,12 +61,12 @@ table {
 /* PAGE STYLES                                              */
 /*----------------------------------------------------------*/
 body {
-	background: rgb(190,190,190) url(/templates/westsenators/images/bg-footer.png) repeat;
+	background: rgb(190,190,190) url(/templates/westsenators/images/bg-content.png) repeat;
 }
 
 a {
 	text-decoration: none;
-	color: #dd5426;
+	color: #DD5522;
 }
 
 a:hover {
@@ -85,19 +88,14 @@ a:hover {
 	float: right;
 }
 
-.nav li {
-	text-transform: uppercase;
-}
-
 .pull-right.item-image {
-	margin: 0 0 18px 20px;
+	margin: 0 0 20px 20px;
 }
 .pull-left.item-image {
-	margin: 0 20px 18px 0;
+	margin: 0 20px 20px 0;
 }
 
 .logo img {
-	padding: 20px;
 }
 
 .logo-mobile {
@@ -140,8 +138,7 @@ a:hover {
 }
 
 .footer {
-	background: url(/templates/westsenators/images/bg-content.png) repeat;
-	padding-bottom: 20px;
+	background: url(/templates/westsenators/images/bg-footer.png) repeat;
 	color: white;
 	line-height: 1.2em;
 }
@@ -216,11 +213,11 @@ a:hover {
 
 .horiznav li li {
 	display: block;
-	background: #dd5426 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
+	background: #DD5522 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 }
 
 .horiznav li li:last-child {
-	background: #dd5426;
+	background: #DD5522;
 	border-bottom: 1px solid #c94a1d;
 }
 
@@ -269,7 +266,7 @@ a:hover {
 }
 
 .breadcrumb .pathway {
-	color: #dd5426;
+	color: #DD5522;
 }
 
 .breadcrumb .pathway:hover {
@@ -290,24 +287,25 @@ a:hover {
 /*----------------------------------------------------------*/
 /* SCHOOLS MENU                                             */
 /*----------------------------------------------------------*/
-.menu-schools li {
+.menu-schools {
 	display: block;
 	padding: 0 20px;
-	height: 30px;
+	line-height: 1.5em;
 	text-decoration: none;
+	text-transform: uppercase;
 	color: black;
 }
 
 /*----------------------------------------------------------*/
 /* LAYOUT STYLES                                            */
 /*----------------------------------------------------------*/
-.item {
+/*.item {
 	clear: both;
 	margin-bottom: 30px;
 }
 
 .page-header {
-	background: #DD5426 url('../images/bg-nav.png') repeat-x;
+	background: #DD5522 url('../images/bg-nav.png') repeat-x;
 	padding-left: 7px;
 	padding-right: 7px;
 }
@@ -347,7 +345,7 @@ a:hover {
 
 .item p {
 	padding-top: 15px;
-}
+}*/
 
 /*----------------------------------------------------------*/
 /* RESPONSIVE DESIGN ADJUSTMENTS                            */

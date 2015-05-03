@@ -1,4 +1,11 @@
 /*----------------------------------------------------------*/
+/* STANDARD COLOR SCHEME FOR WNLS                           */
+/*----------------------------------------------------------*/
+/* Oranges:                  Blacks:                        */
+
+
+
+/*----------------------------------------------------------*/
 /* CSS RESET                                                */
 /*----------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
@@ -63,12 +70,11 @@ a:hover {
 	text-decoration: underline;
 }
 
+/*----------------------------------------------------------*/
+/* UTILITY STYLES                                           */
+/*----------------------------------------------------------*/
 .center {
 	text-align: center;
-}
-
-.nav li {
-	text-transform: uppercase;
 }
 
 .pull-left {
@@ -77,6 +83,10 @@ a:hover {
 
 .pull-right {
 	float: right;
+}
+
+.nav li {
+	text-transform: uppercase;
 }
 
 .pull-right.item-image {
@@ -90,7 +100,10 @@ a:hover {
 	display: none;
 }
 
-#alertbar {
+/*----------------------------------------------------------*/
+/* PAGE SECTION STYLES                                      */
+/*----------------------------------------------------------*/
+.alertbar {
 	color: #fff;
     background: #d02525;
 	border-bottom: white 1px solid;
@@ -104,11 +117,11 @@ a:hover {
     box-shadow:         inset 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-#header {
+.header {
 	background: url(/templates/westsenators/images/bg-header.png) repeat;
 }
 
-#dropshadow {
+.dropshadow {
 	background: url(/templates/westsenators/images/bg-drop-shadow.png) repeat-x;
 	position: relative;
 	z-index: 10;
@@ -116,20 +129,20 @@ a:hover {
 	
 }
 
-#content {
+.content {
 	background-color: white;
 	margin-top: -10px;
 	padding-bottom: 20px;
 }
 
-#footer {
+.footer {
 	background: url(/templates/westsenators/images/bg-content.png) repeat;
 	padding-bottom: 20px;
 	color: white;
 	line-height: 1.2em;
 }
 
-#copyright {
+.copyright {
 	background-color: rgb( 23, 23, 23 );
 	color: white;
 	line-height: 1.2em;
@@ -142,9 +155,9 @@ a:hover {
 /*----------------------------------------------------------*/
 /* PRIMARY NAVIGATION BAR                                   */
 /*----------------------------------------------------------*/
-#mainmenu a:link,
-#mainmenu a:visited ,
-#mainmenu span {
+.mainmenu a:link,
+.mainmenu a:visited ,
+.mainmenu span {
     font-size: large;
 	font-family: sans-serif;
 	color: #fff;
@@ -152,9 +165,9 @@ a:hover {
     text-transform: uppercase;
 }
 
-#mainmenu a:hover,
-#mainmenu a:active,
-#mainmenu span:hover {
+.mainmenu a:hover,
+.mainmenu a:active,
+.mainmenu span:hover {
 	color: #4e1400;
 	-moz-transition: color 0.25s;
     -webkit-transition: color 0.25s;
@@ -162,12 +175,12 @@ a:hover {
     transition: color 0.25s;
 }
 
-#mainmenu {
+.mainmenu {
 	background: url(/templates/westsenators/images/bg-nav.png) repeat-x;
 	text-align: center;
 }
 
-#mainmenu li {
+.mainmenu li {
 	background: url(/templates/westsenators/images/bg-nav-horiz-divider.png) center right no-repeat;
 	margin: 0;
 	padding: 0 20px;
@@ -179,15 +192,15 @@ a:hover {
 	cursor: hand;
 }
 
-#mainmenu li.last {
+.mainmenu li:last-child {
 	background-image: none;
 }
 
-#mainmenu li ul {
+.mainmenu li ul {
 	display: none;
 }
 
-#mainmenu li:hover ul {
+.mainmenu li:hover ul {
 	display: block;
 	position: absolute;
 	margin-top: -1px;
@@ -195,19 +208,19 @@ a:hover {
 	z-index: 20;
 }
 
-#mainmenu li:hover ul:before{
+.mainmenu li:hover ul:before{
 	display: block;
 	background: url(/templates/westsenators/images/bg-nav-shadow.png) repeat-x;
 	height: 10px;
 	content: "";
 }
 
-#mainmenu li:hover li {
+.mainmenu li:hover li {
 	display: block;
 	background: #dd5426 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 }
 
-#mainmenu li:hover li.last {
+.mainmenu li:hover li.last {
 	background: #dd5426;
 	border-bottom: 1px solid #c94a1d;
 }
@@ -216,9 +229,9 @@ a:hover {
 /*----------------------------------------------------------*/
 /* MOBILE NAVIGATION BAR                                    */
 /*----------------------------------------------------------*/
-#mobilemenu a:link,
-#mobilemenu a:visited,
-#mobilemenu span {
+.mobilemenu a:link,
+.mobilemenu a:visited,
+.mobilemenu span {
     font-size: large;
 	font-family: sans-serif;
 	color: #fff;
@@ -226,9 +239,9 @@ a:hover {
     text-transform: uppercase;
 }
 
-#mobilemenu a:hover,
-#mobilemenu a:active,
-#mobilemenu span:active {
+.mobilemenu a:hover,
+.mobilemenu a:active,
+.mobilemenu span:active {
 	color: #4e1400;
 	-moz-transition: color 0.25s;
     -webkit-transition: color 0.25s;
@@ -236,7 +249,7 @@ a:hover {
     transition: color 0.25s;
 }
 
-#mobilemenu {
+.mobilemenu {
 	display: none;
 	background-color: #dd5426;
 	border-top: 1px solid white;
@@ -244,9 +257,9 @@ a:hover {
 	height: 38px;
 }
 
-#mobilemenu li {
+.mobilemenu li {
 	background: #dd5426 url(/templates/westsenators/images/bg-nav-horiz-divider.png) center right no-repeat;
-	display: inline-block;
+	display: block;
 	width: 50%;
 	height: 36px;
 	line-height: 36px;
@@ -256,11 +269,11 @@ a:hover {
 	cursor: hand;
 }
 
-#mobilemenu li.last {
+.mobilemenu li:last-child {
 	background-image: none;
 }
 
-#mobilemenu li ul {
+.mobilemenu li ul {
 	display: none;
 	position: absolute;
 	left: 0;
@@ -270,21 +283,21 @@ a:hover {
 	z-index: 20;
 }
 
-#mobilemenu li ul:before{
+.mobilemenu li ul:before{
 	display: block;
 	background: url(/templates/westsenators/images/bg-nav-shadow.png) repeat-x;
 	height: 10px;
 	content: "";
 }
 
-#mobilemenu li li {
+.mobilemenu li li {
 	background: #dd5426 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 	border: none;
 	margin: 0;
 	width: 100%;
 }
 
-#mobilemenu li li.last {
+.mobilemenu li li.last {
 	background: #dd5426;
 	border-bottom: 1px solid #c94a1d;
 }
@@ -387,29 +400,29 @@ a:hover {
 
 /* Widescreen and large desktops */
 @media only screen and (max-width : 1200px) {
-	#mainmenu li{
+	.mainmenu li{
 		padding: 0 12px;
 	}
 }
 
 /* Desktops */
 @media only screen and (max-width : 960px) {
-	#mainmenu li{
+	.mainmenu li{
 		padding: 0 8px;
 	}
 }
 
 /* Vertical iPad and tablets */
 @media only screen and (max-width : 767px) {
-	#mainmenu {
+	.mainmenu {
 		display: none;
 	}
 
-	#mobilemenu {
+	.mobilemenu {
 		display: block;
 	}
 
-	#copyright {
+	.copyright {
 		margin-bottom: 0;
 	}
 }

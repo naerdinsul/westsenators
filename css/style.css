@@ -38,7 +38,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.5;
 }
 ol, ul {
 	list-style: none;
@@ -55,13 +55,15 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+strong {
+    font-weight: bold;
+}
 
 /*----------------------------------------------------------*/
 /* PAGE STYLES                                              */
 /*----------------------------------------------------------*/
 body {
-	background: rgb(190,190,190) url(/templates/westsenators/images/bg-content.png) repeat;
+	background: rgb(190,190,190) url(../images/bg-content.png) repeat;
 }
 
 a {
@@ -86,6 +88,14 @@ a:hover {
 
 .pull-right {
 	float: right;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.row-fluid {
+	clear: both;
 }
 
 .pull-right.item-image {
@@ -120,11 +130,11 @@ a:hover {
 }
 
 .header {
-	background: url(/templates/westsenators/images/bg-header.png) repeat;
+	background: url(../images/bg-header.png) repeat;
 }
 
 .dropshadow {
-	background: url(/templates/westsenators/images/bg-drop-shadow.png) repeat-x;
+	background: url(../images/bg-drop-shadow.png) repeat-x;
 	position: relative;
 	z-index: 10;
 	height: 10px;
@@ -137,8 +147,14 @@ a:hover {
 	padding-bottom: 20px;
 }
 
+.phone-label{
+	display: inline-block;
+	text-align: left;
+	width: 80px;
+}
+
 .footer {
-	background: url(/templates/westsenators/images/bg-footer.png) repeat;
+	background: url(../images/bg-footer.png) repeat;
 	color: white;
 	line-height: 1.2em;
 }
@@ -150,7 +166,6 @@ a:hover {
 	font-size: small;
 	text-align: center;
 	padding: 10px 0;
-	margin-bottom: 30px;
 }
 
 /*----------------------------------------------------------*/
@@ -177,12 +192,12 @@ a:hover {
 }
 
 .horiznav {
-	background: url(/templates/westsenators/images/bg-nav.png) repeat-x;
+	background: url(../images/bg-nav.png) repeat-x;
 	text-align: center;
 }
 
 .horiznav li {
-	background: url(/templates/westsenators/images/bg-nav-horiz-divider.png) center right no-repeat;
+	background: url(../images/bg-nav-horiz-divider.png) center right no-repeat;
 	margin: 0;
 	padding: 0 20px;
 	height: 40px;
@@ -199,7 +214,7 @@ a:hover {
 .horiznav li ul:before {
 	/* Display drop shadow at the top of drop-down menus */
 	display: block;
-	background: url(/templates/westsenators/images/bg-nav-shadow.png) repeat-x;
+	background: url(../images/bg-nav-shadow.png) repeat-x;
 	height: 10px;
 	content: "";
 }
@@ -213,7 +228,7 @@ a:hover {
 
 .horiznav li li {
 	display: block;
-	background: #DD5522 url(/templates/westsenators/images/bg-nav-vert-divider.png) 0 bottom repeat-x;
+	background: #DD5522 url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 }
 
 .horiznav li li:last-child {

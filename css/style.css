@@ -410,7 +410,7 @@ a:hover {
 /* TEXT STYLES                                              */
 /*----------------------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
-	margin: 9px 0;
+	/*margin: 9px 0;*/
 	font-family: inherit;
 	font-weight: bold;
 	line-height: 1;

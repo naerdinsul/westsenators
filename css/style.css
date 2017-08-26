@@ -153,6 +153,18 @@ a:hover {
 	width: 80px;
 }
 
+.createdby:before {
+	content: url('../images/icon-user.png');
+	height: 16px;
+	width: 16px;
+}
+
+.icon-calendar:before {
+	content: url('../images/icon-calendar.png');
+	height: 16px;
+	width: 16px;
+}
+
 .footer {
 	background: url(../images/bg-footer.png) repeat;
 	color: white;

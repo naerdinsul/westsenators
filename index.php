@@ -9,10 +9,12 @@ $this->language  = $doc->language;
 $this->direction = $doc->direction;
 
 $sitename = $app->get( 'sitename' );
+$path = JURI::base( true ) . '/templates/' . $this->template;
+
 
 // Include Header Information
-$doc->addStyleSheet( 'templates/' . $this->template . '/css/simplegrid.css' );
-$doc->addStyleSheet( 'templates/' . $this->template . '/css/style.css' );
+$doc->addStyleSheet( $path . '/css/simplegrid.css' );
+$doc->addStyleSheet( $path . '/css/style.css' );
 $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' );
 
 // Include extra Javascript
@@ -52,13 +54,14 @@ $doc->addScriptDeclaration('
 			<!-- WNLS LOGO -->
 			<div class="logo logo-full grid">
 				<div class="col-1-2">
-					<a href="/"><img src="/templates/westsenators/images/dome-logo-small.png" alt="Portsmouth West Dome logo"></a>
+					<a href="/"><img src="<?php echo $path ?>/images/dome-logo.png" alt="Portsmouth West Dome logo"></a>
 				</div>
 				<div class="col-1-2">
+					<img id="header-secondary-image" src="<?php echo $path ?>/images/header-right.png" alt="Welcome to the ROCK!">
 				</div>
 			</div>
 			<div class="logo logo-mobile center">
-				<a href="/"><img src="/templates/westsenators/images/dome-logo-small.png" alt="Portsmouth West Dome logo"></a>
+				<a href="/"><img src="<?php echo $path ?>/images/dome-logo.png" alt="Portsmouth West Dome logo"></a>
 			</div>
 			<!-- Other stuff would go here -->
 		</div>
@@ -125,22 +128,37 @@ $doc->addScriptDeclaration('
 	</div>
 	
 	<!-- FOOTER SECTION -->
+	<?php if($this->countModules( 'footer' )) : ?>
+	<div>
+		<jdoc:include type="modules" name="footer" style="xhtml" />
+	</div>
+	<?php endif; ?>
+	
+	
 	<div class="grid footer">
 		<div class="grid">
-			<div class="col-1-3 center">
-				<img src="/templates/westsenators/images/wp-logo-small.png" alt="Porstmouth West WP logo">
-			</div>
-			<div class="col-1-3 center" style="padding-top: 20px;">
+			<div class="col-1-3 center" style="padding: 20px;">
 				<address>
-					Washington-Nile Local Schools<br>
+					<strong>Washington-Nile Local Schools</strong><br>
 					15332 US Hwy. 52<br>
 					West Portsmouth, OH 45663<br>
+					<span class="phone-label">Phone:</span>(740)-858-1111<br>
+					<span class="phone-label">Fax:</span>(740)-858-1110<br>
 				</address>
 			</div>
-			<div class="col-1-3 center" style="padding-top: 20px;">
-				Phone: (740)-858-1111<br>
-				Fax: (740)-858-1110<br>
-				Email: <a href="mailto:contact@westsenators.org">contact@westsenators.org</a><br>
+			<div class="col-1-3 center">
+				<img src="<?php echo $path ?>/images/wp-logo-small.png" alt="Porstmouth West WP logo">
+			</div>
+			<div class="col-1-3 center" style="padding: 20px;">
+				<strong>Portsmouth West Elementary</strong><br>
+				<span class="phone-label">Phone:</span>(740)-858-1116<br>
+				<span class="phone-label">Fax:</span>(740)-858-1118<br><br>
+				<strong>Portsmouth West Middle School</strong><br>
+				<span class="phone-label">Phone:</span>(740)-858-6668<br>
+				<span class="phone-label">Fax:</span>(740)-858-0331<br><br>
+				<strong>Portsmouth West High School</strong><br>
+				<span class="phone-label">Phone:</span>(740)-858-1103<br>
+				<span class="phone-label">Fax:</span>(740)-858-3054<br><br>
 			</div>
 		</div>
 	</div>

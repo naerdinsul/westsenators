@@ -312,6 +312,47 @@ a:hover {
 }
 
 /*----------------------------------------------------------*/
+/* PAGINATION                                               */
+/*----------------------------------------------------------*/
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 10px;
+  width: 100%;
+}
+.pagination li {
+	display: inline-block;
+	text-align: center;
+	padding: 0;
+	margin-left: 3px;
+	min-width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+.pagination li.pagination-start, .pagination li.pagination-end {
+	display: none;
+}
+.pagination a {
+	display: block;
+	text-decoration: none;
+	color: #DD5522;
+	padding: 0;
+	margin-left: 3px;
+	min-width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+.pagination span.pagenav {
+  cursor: default;
+  color: #000;
+}
+.pagination span.pagenav, a:active {
+  outline: none;
+}
+
+/*----------------------------------------------------------*/
 /* LAYOUT STYLES                                            */
 /*----------------------------------------------------------*/
 /*.item {

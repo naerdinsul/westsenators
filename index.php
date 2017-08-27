@@ -60,10 +60,6 @@ $doc->addScriptDeclaration('
 					<img id="header-secondary-image" src="<?php echo $path ?>/images/header-right.png" alt="Welcome to the ROCK!">
 				</div>
 			</div>
-			<div class="logo logo-mobile center">
-				<a href="<?php JURI::base( true ) ?>"><img src="<?php echo $path ?>/images/dome-logo.png" alt="Portsmouth West Dome logo"></a>
-			</div>
-			<!-- Other stuff would go here -->
 		</div>
 		
 		<!-- OTHER HEADER MODULES -->

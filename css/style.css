@@ -82,6 +82,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+img {
+	max-width: 100%;
+}
+
 /*----------------------------------------------------------*/
 /* UTILITY STYLES                                           */
 /*----------------------------------------------------------*/
@@ -418,6 +422,10 @@ a:hover {
   margin-top: 10px;
   width: 100%;
 }
+.pagination ul {
+	margin: 0;
+	padding: 0;
+}
 .pagination li {
 	display: inline-block;
 	text-align: center;
@@ -530,6 +538,10 @@ a:hover {
 
 /* Vertical iPad and tablets */
 @media only screen and (max-width : 767px) {
+	#header-secondary-image {
+		display: none;
+	}
+	
 	.mainmenu {
 		display: none;
 	}
@@ -541,13 +553,7 @@ a:hover {
 
 /* Vertical cell phones */
 @media only screen and (max-width : 480px) {
-	.logo-full {
-		display: none;
-	}
-	
-	.logo-mobile {
-		display: block;
-	}
+
 }
 
 /*----------------------------------------------------------*/

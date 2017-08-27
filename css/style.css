@@ -11,7 +11,7 @@
 /*----------------------------------------------------------*/
 /* CSS RESET                                                */
 /*----------------------------------------------------------*/
-html, body, div, span, applet, object, iframe,
+/*html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -33,7 +33,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+/*article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -57,13 +57,20 @@ table {
 }
 strong {
     font-weight: bold;
-}
+}*/
 
 /*----------------------------------------------------------*/
 /* PAGE STYLES                                              */
 /*----------------------------------------------------------*/
 body {
 	background: rgb(190,190,190) url(../images/bg-content.png) repeat;
+		margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	font-family: sans-serif;
+	vertical-align: baseline;
 }
 
 a {
@@ -171,6 +178,11 @@ a:hover {
 /*----------------------------------------------------------*/
 /* HORZONTAL NAVIGATION BAR                                 */
 /*----------------------------------------------------------*/
+.horiznav {
+	background: url(../images/bg-nav.png) repeat-x;
+	text-align: center;
+}
+
 .horiznav a:link,
 .horiznav a:visited ,
 .horiznav span {
@@ -191,9 +203,9 @@ a:hover {
     transition: color 0.25s;
 }
 
-.horiznav {
-	background: url(../images/bg-nav.png) repeat-x;
-	text-align: center;
+.horiznav ul {
+	margin: 0;
+	padding: 0;
 }
 
 .horiznav li {
@@ -205,6 +217,11 @@ a:hover {
 	display: inline-block;
 	cursor: pointer;
 	cursor: hand;
+}
+
+.horiznav li:hover ul {
+	display: block;
+	margin-left: -20px;
 }
 
 .horiznav li:last-child {
@@ -226,27 +243,105 @@ a:hover {
 	z-index: 20;				/* Float above divs below */
 }
 
-.horiznav li li {
+.horiznav li ul li {
+	text-align: left;
+}
+
+.horiznav li ul li {
 	display: block;
 	background: #DD5522 url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 }
 
-.horiznav li li:last-child {
+.horiznav li ul li:last-child {
 	background: #DD5522;
 	border-bottom: 1px solid #c94a1d;
 }
 
 /*----------------------------------------------------------*/
-/* PRIMARY NAVIGATION BAR                                   */
+/* VERTICAL NAVIGATION BAR                                  */
 /*----------------------------------------------------------*/
-.mainmenu li {
-	text-align: left;
+.vertnav h3 {
+	margin: 0 0 0 0px;
+	/*padding: 0 0 0 20px;*/
+	text-align: center;
+	background: url(../images/bg-nav.png) repeat-x;
+	border-top: 1px solid #ccc;
+	color: white;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: large;
 }
 
-.mainmenu li:hover ul {
-	/* Display on hover instead of waiting for a click in JS */
+.vertnav h3:after {
 	display: block;
+	background: url(../images/bg-drop-shadow.png) repeat-x #D52;
+	height: 10px;
+	content: "";
+}
+
+.vertnav li {
+	background: url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x #D52;
+	line-height: 40px;
+	padding-left: 20px;
+	list-style-type: none;
+}
+
+.vertnav li:last-child {
+    background: #D52;
+}
+
+.vertnav a, .nav-header {
+	color: white;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.vertnav a:hover, .nav-header:hover {
+	color: #4e1400;
+    -moz-transition: color .25s;
+    -webkit-transition: color .25s;
+    -o-transition: color .25s;
+    transition: color .25s;
+}
+
+.vertnav ul {
+	margin: 0;
+	padding: 0;
+}
+
+.vertnav ul ul {
 	margin-left: -20px;
+}
+
+.vertnav ul ul:before {
+	display: block;
+	background: url(../images/bg-drop-shadow.png) repeat-x #ddd;
+	height: 10px;
+	content: "";
+}
+
+.vertnav ul ul li {
+	background: url(../images/bg-nav-vert-divider-grey.png) 0 bottom repeat-x #ddd;
+	padding-left: 40px;
+}
+
+.vertnav ul ul li:last-child {
+	background: #ddd;
+	border-bottom: 1px solid #999;
+	padding-left: 40px;
+}
+
+.vertnav ul ul li a {
+	color: black;
+}
+
+.vertnav ul ul li a:hover {
+	color: #D52;
+    -moz-transition: color .25s;
+    -webkit-transition: color .25s;
+    -o-transition: color .25s;
+    transition: color .25s;
 }
 
 /*----------------------------------------------------------*/
@@ -275,6 +370,7 @@ a:hover {
 /*----------------------------------------------------------*/
 .breadcrumb {
 	background: url(../images/icon-home.png) no-repeat 0px 4px;
+	margin: 0;
 	padding-left: 18px;
 	line-height: 1.5em;
 	border-bottom: dotted 1px black;
@@ -441,10 +537,6 @@ a:hover {
 	.mobilemenu {
 		display: block;
 	}
-
-	.copyright {
-		margin-bottom: 0;
-	}
 }
 
 /* Vertical cell phones */
@@ -462,7 +554,8 @@ a:hover {
 /* TEXT STYLES                                              */
 /*----------------------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
-	/*margin: 9px 0;*/
+	margin: 0;
+	padding: 0;
 	font-family: inherit;
 	font-weight: bold;
 	line-height: 1;

@@ -67,22 +67,8 @@ $doc->addScriptDeclaration('
 		</div>
 		
 		<!-- OTHER HEADER MODULES -->
-		<jdoc:include type="modules" name="header" title="Header" />
+		<jdoc:include type="modules" name="header" title="Header" style="xhtml" />
 	</div>
-	
-	<!-- MAINMENU -->
-	<?php if($this->countModules( 'mainmenu' )) : ?>
-	<div class="horiznav mainmenu">
-		<jdoc:include type="modules" name="mainmenu" />
-	</div>
-	<?php endif; ?>
-	
-	<!-- MOBILEMENU -->
-	<?php if($this->countModules( 'mobilemenu' )) : ?>
-	<div class="horiznav mobilemenu">
-		<jdoc:include type="modules" name="mobilemenu" />
-	</div>
-	<?php endif; ?>
 
 	<!-- DROPSHADOW -->
 	<div class="dropshadow"></div>
@@ -138,13 +124,11 @@ $doc->addScriptDeclaration('
 	<div class="grid footer">
 		<div class="grid">
 			<div class="col-1-3 center" style="padding: 20px;">
-				<address>
-					<strong>Washington-Nile Local Schools</strong><br>
-					15332 US Hwy. 52<br>
-					West Portsmouth, OH 45663<br>
-					<span class="phone-label">Phone:</span>(740)-858-1111<br>
-					<span class="phone-label">Fax:</span>(740)-858-1110<br>
-				</address>
+				<strong>Washington-Nile Local Schools</strong><br>
+				15332 US Hwy. 52<br>
+				West Portsmouth, OH 45663<br>
+				<span class="phone-label">Phone:</span>(740)-858-1111<br>
+				<span class="phone-label">Fax:</span>(740)-858-1110<br>
 			</div>
 			<div class="col-1-3 center">
 				<img src="<?php echo $path ?>/images/wp-logo-small.png" alt="Porstmouth West WP logo">

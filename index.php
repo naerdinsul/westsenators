@@ -54,14 +54,14 @@ $doc->addScriptDeclaration('
 			<!-- WNLS LOGO -->
 			<div class="logo logo-full grid">
 				<div class="col-1-2">
-					<a href="/"><img src="<?php echo $path ?>/images/dome-logo.png" alt="Portsmouth West Dome logo"></a>
+					<a href="<?php JURI::base( true ) ?>"><img src="<?php echo $path ?>/images/dome-logo.png" alt="Portsmouth West Dome logo"></a>
 				</div>
 				<div class="col-1-2">
 					<img id="header-secondary-image" src="<?php echo $path ?>/images/header-right.png" alt="Welcome to the ROCK!">
 				</div>
 			</div>
 			<div class="logo logo-mobile center">
-				<a href="/"><img src="<?php echo $path ?>/images/dome-logo.png" alt="Portsmouth West Dome logo"></a>
+				<a href="<?php JURI::base( true ) ?>"><img src="<?php echo $path ?>/images/dome-logo.png" alt="Portsmouth West Dome logo"></a>
 			</div>
 			<!-- Other stuff would go here -->
 		</div>

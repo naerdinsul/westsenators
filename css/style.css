@@ -9,21 +9,10 @@
 /*----------------------------------------------------------*/
 
 /*----------------------------------------------------------*/
-/* CSS RESET                                                */
+/* PAGE STYLES                                              */
 /*----------------------------------------------------------*/
-/*html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+body {
+	background: rgb(190,190,190) url(../images/bg-content.png) repeat;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -32,97 +21,44 @@ time, mark, audio, video {
 	font-family: sans-serif;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-/*article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1.5;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-strong {
-    font-weight: bold;
-}*/
-
-/*----------------------------------------------------------*/
-/* PAGE STYLES                                              */
-/*----------------------------------------------------------*/
-body {
-	background: rgb(190,190,190) url(../images/bg-content.png) repeat;
-		margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	font-family: sans-serif;
-	vertical-align: baseline;
-}
-
 a {
 	text-decoration: none;
 	color: #DD5522;
 }
-
 a:hover {
 	text-decoration: underline;
 }
-
 img {
 	max-width: 100%;
 }
-
 /*----------------------------------------------------------*/
-/* UTILITY STYLES                                           */
+/* UTILITY CLASSES                                          */
 /*----------------------------------------------------------*/
 .center {
 	text-align: center;
 }
-
 .pull-left {
 	float: left;
 }
-
 .pull-right {
 	float: right;
 }
-
 .clearfix {
 	clear: both;
 }
-
 .row-fluid {
 	clear: both;
 }
-
 .pull-right.item-image {
 	margin: 0 0 20px 20px;
-}
-.pull-left.item-image {
+}.pull-left.item-image {
 	margin: 0 20px 20px 0;
 }
-
-.logo img {
+.phone-label{
+	display: inline-block;
+	text-align: left;
+	width: 80px;
 }
-
-.logo-mobile {
-	display: none;
-}
-
 /*----------------------------------------------------------*/
 /* PAGE SECTION STYLES                                      */
 /*----------------------------------------------------------*/
@@ -139,11 +75,9 @@ img {
     -moz-box-shadow:    inset 0 0 30px rgba(0, 0, 0, 0.5);
     box-shadow:         inset 0 0 30px rgba(0, 0, 0, 0.5);
 }
-
 .header {
 	background: url(../images/bg-header.png) repeat;
 }
-
 .dropshadow {
 	background: url(../images/bg-drop-shadow.png) repeat-x;
 	position: relative;
@@ -151,25 +85,16 @@ img {
 	height: 10px;
 	
 }
-
 .content {
 	background-color: white;
 	margin-top: -10px;
 	padding-bottom: 20px;
 }
-
-.phone-label{
-	display: inline-block;
-	text-align: left;
-	width: 80px;
-}
-
 .footer {
 	background: url(../images/bg-footer.png) repeat;
 	color: white;
 	line-height: 1.2em;
 }
-
 .copyright {
 	background-color: rgb( 23, 23, 23 );
 	color: white;
@@ -178,7 +103,6 @@ img {
 	text-align: center;
 	padding: 10px 0;
 }
-
 /*----------------------------------------------------------*/
 /* HORZONTAL NAVIGATION BAR                                 */
 /*----------------------------------------------------------*/
@@ -186,7 +110,6 @@ img {
 	background: url(../images/bg-nav.png) repeat-x;
 	text-align: center;
 }
-
 .horiznav a:link,
 .horiznav a:visited ,
 .horiznav span {
@@ -196,7 +119,6 @@ img {
     text-decoration: none;
     text-transform: uppercase;
 }
-
 .horiznav a:hover,
 .horiznav a:active,
 .horiznav span:hover {
@@ -206,12 +128,10 @@ img {
     -o-transition: color 0.25s;
     transition: color 0.25s;
 }
-
 .horiznav ul {
 	margin: 0;
 	padding: 0;
 }
-
 .horiznav li {
 	background: url(../images/bg-nav-horiz-divider.png) center right no-repeat;
 	margin: 0;
@@ -222,16 +142,13 @@ img {
 	cursor: pointer;
 	cursor: hand;
 }
-
 .horiznav li:hover ul {
 	display: block;
 	margin-left: -20px;
 }
-
 .horiznav li:last-child {
 	background-image: none;		/* Hide horizontal divider on last entry */
 }
-
 .horiznav li ul:before {
 	/* Display drop shadow at the top of drop-down menus */
 	display: block;
@@ -239,28 +156,23 @@ img {
 	height: 10px;
 	content: "";
 }
-
 .horiznav li ul {
 	display: none;				/* Hide drop-down menus by default */
 	position: absolute;
 	margin-top: -1px;
 	z-index: 20;				/* Float above divs below */
 }
-
 .horiznav li ul li {
 	text-align: left;
 }
-
 .horiznav li ul li {
 	display: block;
 	background: #DD5522 url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 }
-
 .horiznav li ul li:last-child {
 	background: #DD5522;
 	border-bottom: 1px solid #c94a1d;
 }
-
 /*----------------------------------------------------------*/
 /* VERTICAL NAVIGATION BAR                                  */
 /*----------------------------------------------------------*/
@@ -275,32 +187,27 @@ img {
 	font-weight: normal;
 	font-size: large;
 }
-
 .vertnav h3:after {
 	display: block;
 	background: url(../images/bg-drop-shadow.png) repeat-x #D52;
 	height: 10px;
 	content: "";
 }
-
 .vertnav li {
 	background: url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x #D52;
 	line-height: 40px;
 	padding-left: 20px;
 	list-style-type: none;
 }
-
 .vertnav li:last-child {
     background: #D52;
 }
-
 .vertnav a, .nav-header {
 	color: white;
 	cursor: pointer;
 	text-transform: uppercase;
 	text-decoration: none;
 }
-
 .vertnav a:hover, .nav-header:hover {
 	color: #4e1400;
     -moz-transition: color .25s;
@@ -308,38 +215,31 @@ img {
     -o-transition: color .25s;
     transition: color .25s;
 }
-
 .vertnav ul {
 	margin: 0;
 	padding: 0;
 }
-
 .vertnav ul ul {
 	margin-left: -20px;
 }
-
 .vertnav ul ul:before {
 	display: block;
 	background: url(../images/bg-drop-shadow.png) repeat-x #ddd;
 	height: 10px;
 	content: "";
 }
-
 .vertnav ul ul li {
 	background: url(../images/bg-nav-vert-divider-grey.png) 0 bottom repeat-x #ddd;
 	padding-left: 40px;
 }
-
 .vertnav ul ul li:last-child {
 	background: #ddd;
 	border-bottom: 1px solid #999;
 	padding-left: 40px;
 }
-
 .vertnav ul ul li a {
 	color: black;
 }
-
 .vertnav ul ul li a:hover {
 	color: #D52;
     -moz-transition: color .25s;
@@ -347,28 +247,23 @@ img {
     -o-transition: color .25s;
     transition: color .25s;
 }
-
 /*----------------------------------------------------------*/
 /* MOBILE NAVIGATION BAR                                    */
 /*----------------------------------------------------------*/
-.mobilemenu {
+.mobile-horiznav {
 	display: none;			/* Hide mobilenav at start.  Display only on small devices */
 }
-
-.mobilemenu li {
+.mobile-horiznav li {
 	width: 50%;				/* Only two menu entries on small screens */
 	text-align: center;		/* Make them take up whole width and center text */
 }
-
-.mobilemenu li ul {
+.mobile-horiznav li ul {
 	left: 0;				/* Force left edge all the way to the left */
 	width: 100%;			/* make menu entries span the whole width of the screen */
 }
-
-.mobilemenu li li {
+.mobile-horiznav li li {
 	width: 100%;    		/* Make menu entries span the whole width of the screen */
 }
-
 /*----------------------------------------------------------*/
 /* BREADCRUMBS                                              */
 /*----------------------------------------------------------*/
@@ -379,38 +274,21 @@ img {
 	line-height: 1.5em;
 	border-bottom: dotted 1px black;
 }
-
 .breadcrumb .pathway {
 	color: #DD5522;
 }
-
 .breadcrumb .pathway:hover {
 	text-decoration: underline;
 }
-
 .breadcrumb .divider {
 	background: none;
 	content: ">";
 }
-
 .breadcrumb li {
 	display: inline;
 	color: #000;
     text-transform: uppercase;
 }
-
-/*----------------------------------------------------------*/
-/* SCHOOLS MENU                                             */
-/*----------------------------------------------------------*/
-.menu-schools {
-	display: block;
-	padding: 0 20px;
-	line-height: 1.5em;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: black;
-}
-
 /*----------------------------------------------------------*/
 /* PAGINATION                                               */
 /*----------------------------------------------------------*/
@@ -421,12 +299,10 @@ img {
   padding: 0;
   margin-top: 10px;
   width: 100%;
-}
-.pagination ul {
+}.pagination ul {
 	margin: 0;
 	padding: 0;
-}
-.pagination li {
+}.pagination li {
 	display: inline-block;
 	text-align: center;
 	padding: 0;
@@ -434,11 +310,9 @@ img {
 	min-width: 30px;
 	height: 30px;
 	line-height: 30px;
-}
-.pagination li.pagination-start, .pagination li.pagination-end {
+}.pagination li.pagination-start, .pagination li.pagination-end {
 	display: none;
-}
-.pagination a {
+}.pagination a {
 	display: block;
 	text-decoration: none;
 	color: #DD5522;
@@ -447,22 +321,18 @@ img {
 	min-width: 30px;
 	height: 30px;
 	line-height: 30px;
-}
-.pagination span.pagenav {
+}.pagination span.pagenav {
   cursor: default;
   color: #000;
-}
-.pagination span.pagenav, a:active {
+}.pagination span.pagenav, a:active {
   outline: none;
 }
-
 /*----------------------------------------------------------*/
 /* ARTICLE STYLES                                            */
 /*----------------------------------------------------------*/
 .item {
 	margin-bottom: 30px;
-}
-.article-info {
+}.article-info {
 	font-size: 80%;
 	margin-bottom: 10px;
 }
@@ -478,89 +348,40 @@ img {
 	height: 16px;
 	width: 16px;
 }
-/*.page-header {
-	background: #DD5522 url('../images/bg-nav.png') repeat-x;
-	padding-left: 7px;
-	padding-right: 7px;
-}
-
-.page-header a {
-	color: white;
-	text-decoration: none;
-}
-
-.westsenators-post-date:before {
-	content: url('../images/icon-calendar.png');
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 0;
-	line-height: 0;
-	bottom: auto;
-}
-
-.westsenators-post-date {
-	margin-right: 7px;
-}
-
-.westsenators-post-by:before {
-	content: url('../images/icon-user.png');
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 0;
-	line-height: 0;
-	bottom: auto;
-}
-
-.westsenators-post-by {
-	margin-right: 7px;
-}
-*/
-
 /*----------------------------------------------------------*/
 /* RESPONSIVE DESIGN ADJUSTMENTS                            */
 /*----------------------------------------------------------*/
-
 /* Widescreen and large desktops */
 @media only screen and (max-width : 1200px) {
-	.mainmenu li{
+	.horiznav li{				/* Reduce padding between menu items on smaller screens */
 		padding: 0 12px;
 	}
 }
-
 /* Desktops */
 @media only screen and (max-width : 960px) {
-	.mainmenu li{
+	.horiznav li{				/* Reduce padding between menu items on smaller screens */
 		padding: 0 8px;
 	}
 }
-
 /* Vertical iPad and tablets */
 @media only screen and (max-width : 767px) {
 	#header-secondary-image {
 		display: none;
-	}
-	
+	}	
 	.content{
 		margin-top: -10px;
 		padding: 0;
-	}
-	
-	.mainmenu {
+	}	
+	.horiznav {
 		display: none;
 	}
-
-	.mobilemenu {
+	.mobile-horiznav {
 		display: block;
 	}
 }
-
 /* Vertical cell phones */
 @media only screen and (max-width : 480px) {
-
 }
-
 /*----------------------------------------------------------*/
 /* TEXT STYLES                                              */
 /*----------------------------------------------------------*/
@@ -573,55 +394,44 @@ h1,h2,h3,h4,h5,h6 {
 	color: inherit;
 	text-rendering: optimizelegibility;
 }
-
 h1 small,h2 small,h3 small,h4 small,h5 small,h6 small {
 	font-weight: normal;
 	line-height: 1;
 	color: #999;
 }
-
 h1 {
 	font-size: 36px;
 	line-height: 40px;
 }
-
 h2 {
 	font-size: 30px;
 	line-height: 40px;
 }
-
 h3 {
 	font-size: 24px;
 	line-height: 40px;
 }
-
 h4 {
 	font-size: 18px;
 	line-height: 20px;
 }
-
 h5 {
 	font-size: 14px;
 	line-height: 20px;
 }
-
 h6 {
 	font-size: 12px;
 	line-height: 20px;
 }
-
 h1 small {
 	font-size: 24px;
 }
-
 h2 small {
 	font-size: 18px;
 }
-
 h3 small {
 	font-size: 14px;
 }
-
 h4 small {
 	font-size: 14px;
 }

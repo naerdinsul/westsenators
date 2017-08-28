@@ -22,10 +22,10 @@ $doc->addScriptDeclaration('
 
 	/* Toggle mobile menu selections */
 	jQuery(document).ready(function() {
-		jQuery(".mobilemenu ul").children("li").each(function() {
+		jQuery(".mobile-horiznav ul").children("li").each(function() {
 			jQuery(this).click(function() {
 				/* Hide everything */
-				jQuery(".mobilemenu ul").children("li").not(this).children("ul").each(function() {
+				jQuery(".mobile-horiznav ul").children("li").not(this).children("ul").each(function() {
 					jQuery(this).hide();
 				});
 			
@@ -50,15 +50,13 @@ $doc->addScriptDeclaration('
 
 	<!-- HEADER SECTION -->
 	<div class="header">
+		<!-- WNLS LOGO -->
 		<div class="grid">
-			<!-- WNLS LOGO -->
-			<div class="logo logo-full grid">
-				<div class="col-1-2">
-					<a href="<?php JURI::base( true ) ?>"><img src="<?php echo $path ?>/images/dome-logo.png" alt="Portsmouth West Dome logo"></a>
-				</div>
-				<div class="col-1-2">
-					<img id="header-secondary-image" src="<?php echo $path ?>/images/header-right.png" alt="Welcome to the ROCK!">
-				</div>
+			<div class="col-1-2">
+				<a href="<?php JURI::base( true ) ?>"><img src="<?php echo $path ?>/images/dome-logo.png" alt="Portsmouth West Dome logo"></a>
+			</div>
+			<div class="col-1-2">
+				<img id="header-secondary-image" src="<?php echo $path ?>/images/header-right.png" alt="Welcome to the ROCK!">
 			</div>
 		</div>
 		
@@ -72,9 +70,9 @@ $doc->addScriptDeclaration('
 	<!-- CONTENT SECTION -->	
 	<div class="grid content">
 		
-		<?php if($this->countModules( 'user-top' )) : ?>
 		<!-- TOP CONTENT SECTION -->
-		<div class="grid grid-pad">
+		<?php if($this->countModules( 'user-top' )) : ?>
+		<div class="grid-pad">
 			<div class="col-1-1">
 				<jdoc:include type="modules" name="user-top" style="xhtml" />
 			</div>
@@ -91,16 +89,18 @@ $doc->addScriptDeclaration('
 			<!-- LEFT CONTENT SECTION -->
 			<div class="col-4-12">
 				<jdoc:include type="modules" name="user-left" style="xhtml" />
-			</div>	
+			</div>
+			
+			<!-- COLAPSE LEFT COLUMN IF NO MODULES THERE -->
 			<?php else: ?>
 			<div class="col-1-1">
 				<jdoc:include type="component" />
 			</div>
 			<?php endif; ?>
 		</div>
-		
+
+		<!-- BOTTOM CONTENT SECTION -->		
 		<?php if($this->countModules( 'user-bottom' )) : ?>
-		<!-- BOTTOM CONTENT SECTION -->
 		<div class="grid grid-pad">
 			<div class="col-1-1">
 				<jdoc:include type="modules" name="user-bottom" style="xhtml" />
@@ -118,28 +118,26 @@ $doc->addScriptDeclaration('
 	
 	
 	<div class="grid footer">
-		<div class="grid">
-			<div class="col-1-3 center" style="padding: 20px;">
-				<strong>Washington-Nile Local Schools</strong><br>
-				15332 US Hwy. 52<br>
-				West Portsmouth, OH 45663<br>
-				<span class="phone-label">Phone:</span>(740)-858-1111<br>
-				<span class="phone-label">Fax:</span>(740)-858-1110<br>
-			</div>
-			<div class="col-1-3 center">
-				<img src="<?php echo $path ?>/images/wp-logo-small.png" alt="Porstmouth West WP logo">
-			</div>
-			<div class="col-1-3 center" style="padding: 20px;">
-				<strong>Portsmouth West Elementary</strong><br>
-				<span class="phone-label">Phone:</span>(740)-858-1116<br>
-				<span class="phone-label">Fax:</span>(740)-858-1118<br><br>
-				<strong>Portsmouth West Middle School</strong><br>
-				<span class="phone-label">Phone:</span>(740)-858-6668<br>
-				<span class="phone-label">Fax:</span>(740)-858-0331<br><br>
-				<strong>Portsmouth West High School</strong><br>
-				<span class="phone-label">Phone:</span>(740)-858-1103<br>
-				<span class="phone-label">Fax:</span>(740)-858-3054<br><br>
-			</div>
+		<div class="col-1-3 center" style="padding: 20px;">
+			<strong>Washington-Nile Local Schools</strong><br>
+			15332 US Hwy. 52<br>
+			West Portsmouth, OH 45663<br>
+			<span class="phone-label">Phone:</span>(740)-858-1111<br>
+			<span class="phone-label">Fax:</span>(740)-858-1110<br>
+		</div>
+		<div class="col-1-3 center">
+			<img src="<?php echo $path ?>/images/wp-logo-small.png" alt="Porstmouth West WP logo">
+		</div>
+		<div class="col-1-3 center" style="padding: 20px;">
+			<strong>Portsmouth West Elementary</strong><br>
+			<span class="phone-label">Phone:</span>(740)-858-1116<br>
+			<span class="phone-label">Fax:</span>(740)-858-1118<br><br>
+			<strong>Portsmouth West Middle School</strong><br>
+			<span class="phone-label">Phone:</span>(740)-858-6668<br>
+			<span class="phone-label">Fax:</span>(740)-858-0331<br><br>
+			<strong>Portsmouth West High School</strong><br>
+			<span class="phone-label">Phone:</span>(740)-858-1103<br>
+			<span class="phone-label">Fax:</span>(740)-858-3054<br><br>
 		</div>
 	</div>
 	<div class="grid copyright">

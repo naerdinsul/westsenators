@@ -179,8 +179,12 @@ body {
 		min-width: 0;
 		margin-left: 0px;
 		margin-right: 0px;
-		padding-left: 20px; /* grid-space to left */
-		padding-right: 10px; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */
+	}
+	
+	.grid-pad {
+		padding-top: 10px;
+		padding-left: 10px;
+		padding-right: 0px;
 	}
 	
 	[class*='col-'] {

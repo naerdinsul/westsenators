@@ -542,6 +542,11 @@ img {
 		display: none;
 	}
 	
+	.content{
+		margin-top: -10px;
+		padding: 0;
+	}
+	
 	.mainmenu {
 		display: none;
 	}

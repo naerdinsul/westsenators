@@ -67,6 +67,10 @@ $doc->addScriptDeclaration('
 
 	<!-- CONTENT SECTION -->	
 	<div class="grid content">
+		<?php if($this->countModules( 'user-banner' )) : ?>
+		<!-- BANNER SECTION -->
+		<jdoc:include type="modules" name="user-banner" style="xhtml" />
+		<?php endif; ?>
 		
 		<?php if($this->countModules( 'user-top' )) : ?>
 		<!-- TOP CONTENT SECTION -->

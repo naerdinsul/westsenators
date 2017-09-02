@@ -29,6 +29,7 @@
 		<position>header</position>
 		<position>user-top</position>
 		<position>user-left</position>
+		<position>user-right</position>
 		<position>user-bottom</position>
 		<position>debug</position>
 	</positions>

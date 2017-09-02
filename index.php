@@ -80,19 +80,52 @@ $doc->addScriptDeclaration('
 		<?php endif; ?>
 		
 		<div class="grid grid-pad">
+			<?php
+			// THREE-COLUMN LAYOUT WITH MODULES IN USER-LEFT AND USER-RIGHT
+			if($this->countModules( 'user-left and user-right' )) : ?>
+			<!-- LEFT CONTENT SECTION -->
+			<div class="col-3-12">
+				<jdoc:include type="modules" name="user-left" style="xhtml" />
+			</div>
+
 			<!-- MAIN CONTENT SECTION -->
-			<?php if($this->countModules( 'user-left' )) : ?>
-			<div class="col-8-12 push-right">
+			<div class="col-6-12">
 				<jdoc:include type="component" />
 			</div>
 
+			<!-- RIGHT CONTENT SECTION -->
+			<div class="col-3-12 push-right">
+				<jdoc:include type="modules" name="user-right" style="xhtml" />
+			</div>
+			<?php
+			// TWO COLUMN LAYOUT WITH MODULES IN ONLY USER-LEFT
+			elseif($this->countModules( 'user-left' )) : ?>
+			<!-- MAIN CONTENT SECTION -->
+			<div class="col-8-12 push-right">
+				<jdoc:include type="component" />
+			</div>
+			
 			<!-- LEFT CONTENT SECTION -->
 			<div class="col-4-12">
 				<jdoc:include type="modules" name="user-left" style="xhtml" />
 			</div>
+			<?php
+			// TWO COLUMN LAYOUT WITH MODULES IN ONLY USER-RIGHT
+			elseif($this->countModules( 'user-right' )) : ?>
+			<!-- MAIN CONTENT SECTION -->
+			<div class="col-8-12">
+				<jdoc:include type="component" />
+			</div>
 			
-			<!-- COLAPSE LEFT COLUMN IF NO MODULES THERE -->
-			<?php else: ?>
+			<!-- RIGHT CONTENT SECTION -->
+			<div class="col-4-12">
+				<jdoc:include type="modules" name="user-right" style="xhtml" />
+			</div>
+			<?php
+			// COLAPSE LEFT AND RIGHT COLUMN SINCE THERE ARE NO MODULES THERE
+			else:
+			?>
+			<!-- MAIN CONTENT SECTION -->
 			<div class="col-1-1">
 				<jdoc:include type="component" />
 			</div>

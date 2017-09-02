@@ -1,5 +1,4 @@
 <?php
-
 defined('_JEXEC') or die;
 
 $app             = JFactory::getApplication();
@@ -10,7 +9,6 @@ $this->direction = $doc->direction;
 
 $sitename = $app->get( 'sitename' );
 $path = JURI::base( true ) . '/templates/' . $this->template;
-
 
 // Include Header Information
 $doc->addStyleSheet( $path . '/css/simplegrid.css' );
@@ -43,8 +41,8 @@ $doc->addScriptDeclaration('
 </head>
 
 <body>
-	<!-- NOTIFICATION SECTION -->
 	<?php if($this->countModules( 'notification' )) : ?>
+	<!-- NOTIFICATION SECTION -->
 	<jdoc:include type="modules" name="notification" />
 	<?php endif; ?>
 
@@ -70,8 +68,8 @@ $doc->addScriptDeclaration('
 	<!-- CONTENT SECTION -->	
 	<div class="grid content">
 		
-		<!-- TOP CONTENT SECTION -->
 		<?php if($this->countModules( 'user-top' )) : ?>
+		<!-- TOP CONTENT SECTION -->
 		<div class="grid-pad">
 			<div class="col-1-1">
 				<jdoc:include type="modules" name="user-top" style="xhtml" />
@@ -132,9 +130,9 @@ $doc->addScriptDeclaration('
 			<?php endif; ?>
 		</div>
 
-		<!-- BOTTOM CONTENT SECTION -->		
 		<?php if($this->countModules( 'user-bottom' )) : ?>
-		<div class="grid grid-pad">
+		<!-- BOTTOM CONTENT SECTION -->
+		<div class="grid-pad">
 			<div class="col-1-1">
 				<jdoc:include type="modules" name="user-bottom" style="xhtml" />
 			</div>
@@ -142,42 +140,44 @@ $doc->addScriptDeclaration('
 		<?php endif; ?>
 	</div>
 	
-	<!-- FOOTER SECTION -->
-	<?php if($this->countModules( 'footer' )) : ?>
-	<div>
-		<jdoc:include type="modules" name="footer" style="xhtml" />
-	</div>
-	<?php endif; ?>
-	
-	
+	<!-- FOOTER SECTION -->	
 	<div class="grid footer">
-		<div class="col-1-3 center" style="padding: 20px;">
-			<strong>Washington-Nile Local Schools</strong><br>
-			15332 US Hwy. 52<br>
-			West Portsmouth, OH 45663<br>
-			<span class="phone-label">Phone:</span>(740)-858-1111<br>
-			<span class="phone-label">Fax:</span>(740)-858-1110<br>
+		<?php if($this->countModules( 'footer' )) : ?>
+		<div class="grid-pad col-1-1">
+			<jdoc:include type="modules" name="footer" style="xhtml" />
 		</div>
-		<div class="col-1-3 center">
-			<img src="<?php echo $path ?>/images/wp-logo-small.png" alt="Porstmouth West WP logo">
-		</div>
-		<div class="col-1-3 center" style="padding: 20px;">
-			<strong>Portsmouth West Elementary</strong><br>
-			<span class="phone-label">Phone:</span>(740)-858-1116<br>
-			<span class="phone-label">Fax:</span>(740)-858-1118<br><br>
-			<strong>Portsmouth West Middle School</strong><br>
-			<span class="phone-label">Phone:</span>(740)-858-6668<br>
-			<span class="phone-label">Fax:</span>(740)-858-0331<br><br>
-			<strong>Portsmouth West High School</strong><br>
-			<span class="phone-label">Phone:</span>(740)-858-1103<br>
-			<span class="phone-label">Fax:</span>(740)-858-3054<br><br>
+		<?php endif; ?>
+		<div class="grid grid-pad">
+			<div class="col-1-3 center"">
+				<strong>Washington-Nile Local Schools</strong><br>
+				15332 US Hwy. 52<br>
+				West Portsmouth, OH 45663<br>
+				<span class="phone-label">Phone:</span>(740)-858-1111<br>
+				<span class="phone-label">Fax:</span>(740)-858-1110<br>
+			</div>
+			<div class="col-1-3 center">
+				<img src="<?php echo $path ?>/images/wp-logo-small.png" alt="Porstmouth West WP logo">
+			</div>
+			<div class="col-1-3 center">
+				<strong>Portsmouth West Elementary</strong><br>
+				<span class="phone-label">Phone:</span>(740)-858-1116<br>
+				<span class="phone-label">Fax:</span>(740)-858-1118<br><br>
+				<strong>Portsmouth West Middle School</strong><br>
+				<span class="phone-label">Phone:</span>(740)-858-6668<br>
+				<span class="phone-label">Fax:</span>(740)-858-0331<br><br>
+				<strong>Portsmouth West High School</strong><br>
+				<span class="phone-label">Phone:</span>(740)-858-1103<br>
+				<span class="phone-label">Fax:</span>(740)-858-3054<br><br>
+			</div>
 		</div>
 	</div>
 	<div class="grid copyright">
 		&copy; <?php echo date('Y'); ?> <?php echo $sitename; ?>
 	</div>
 
+	<?php if($this->countModules( 'debug' )) : ?>
 	<!-- DEBUG SECTION -->
 	<jdoc:include type="modules" name="debug" />
+	<?php endif; ?>
 </body>
 </html>

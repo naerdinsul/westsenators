@@ -31,6 +31,7 @@
 		<position>user-left</position>
 		<position>user-right</position>
 		<position>user-bottom</position>
+		<position>footer</position>
 		<position>debug</position>
 	</positions>
 	

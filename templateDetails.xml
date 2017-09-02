@@ -27,6 +27,7 @@
 	<positions>
 		<position>notification</position>
 		<position>header</position>
+		<position>banner</position>
 		<position>user-top</position>
 		<position>user-left</position>
 		<position>user-right</position>

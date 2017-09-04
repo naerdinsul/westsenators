@@ -23,7 +23,7 @@ body {
 }
 a {
 	text-decoration: none;
-	color: #DD5522;
+	color: #D52;
 }
 a:hover {
 	text-decoration: underline;
@@ -95,6 +95,7 @@ img {
 /*----------------------------------------------------------*/
 .horiznav {
 	background: url(../images/bg-nav.png) repeat-x;
+	height: 40px;
 	text-align: center;
 }
 .horiznav a:link,
@@ -102,18 +103,18 @@ img {
 .horiznav span {
     font-size: large;
 	font-family: sans-serif;
-	color: #fff;
+	color: #FFF;
     text-decoration: none;
     text-transform: uppercase;
 }
 .horiznav a:hover,
 .horiznav a:active,
 .horiznav span:hover {
-	color: #4e1400;
-	-moz-transition: color 0.25s;
+	color: #4E1400;
+	-moz-transition:    color 0.25s;
     -webkit-transition: color 0.25s;
-    -o-transition: color 0.25s;
-    transition: color 0.25s;
+    -o-transition:      color 0.25s;
+    transition:         color 0.25s;
 }
 .horiznav ul {
 	margin: 0;
@@ -154,21 +155,32 @@ img {
 }
 .horiznav li ul li {
 	display: block;
-	background: #DD5522 url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x;
+	background: #D52 url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x;
 }
 .horiznav li ul li:last-child {
-	background: #DD5522;
-	border-bottom: 1px solid #c94a1d;
+	background: #D52;
+	border-bottom: 1px solid #C94A1D;
+}
+.horiznav a.horiznav-menubtn {
+	display: none;				/* Hide hamburger button by default */
+	margin: 9px;
+}
+.horiznav .horiznav-menubtn span{
+	display: block;
+	margin: 3px 1px;
+	height: 3px;
+	width: 20px;
+	background: #FFF;
+	border-radius: 3px;
 }
 /*----------------------------------------------------------*/
 /* VERTICAL NAVIGATION BAR                                  */
 /*----------------------------------------------------------*/
 .vertnav h3 {
-	margin: 0 0 0 0px;
-	/*padding: 0 0 0 20px;*/
+	margin: 0;
 	text-align: center;
 	background: url(../images/bg-nav.png) repeat-x;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #CCC;
 	color: white;
 	text-transform: uppercase;
 	font-weight: normal;
@@ -179,6 +191,10 @@ img {
 	background: url(../images/bg-drop-shadow.png) repeat-x #D52;
 	height: 10px;
 	content: "";
+}
+.vertnav ul {
+	margin: 0;
+	padding: 0;
 }
 .vertnav li {
 	background: url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x #D52;
@@ -196,31 +212,27 @@ img {
 	text-decoration: none;
 }
 .vertnav a:hover, .nav-header:hover {
-	color: #4e1400;
-    -moz-transition: color .25s;
+	color: #4E1400;
+    -moz-transition:    color .25s;
     -webkit-transition: color .25s;
-    -o-transition: color .25s;
-    transition: color .25s;
-}
-.vertnav ul {
-	margin: 0;
-	padding: 0;
+    -o-transition:      color .25s;
+    transition:         color .25s;
 }
 .vertnav ul ul {
 	margin-left: -20px;
 }
 .vertnav ul ul:before {
 	display: block;
-	background: url(../images/bg-drop-shadow.png) repeat-x #ddd;
+	background: url(../images/bg-drop-shadow.png) repeat-x #DDD;
 	height: 10px;
 	content: "";
 }
 .vertnav ul ul li {
-	background: url(../images/bg-nav-vert-divider-grey.png) 0 bottom repeat-x #ddd;
+	background: url(../images/bg-nav-vert-divider-grey.png) 0 bottom repeat-x #DDD;
 	padding-left: 40px;
 }
 .vertnav ul ul li:last-child {
-	background: #ddd;
+	background: #DDD;
 	border-bottom: 1px solid #999;
 	padding-left: 40px;
 }
@@ -229,27 +241,10 @@ img {
 }
 .vertnav ul ul li a:hover {
 	color: #D52;
-    -moz-transition: color .25s;
+    -moz-transition:    color .25s;
     -webkit-transition: color .25s;
-    -o-transition: color .25s;
-    transition: color .25s;
-}
-/*----------------------------------------------------------*/
-/* MOBILE NAVIGATION BAR                                    */
-/*----------------------------------------------------------*/
-.mobile-horiznav {
-	display: none;			/* Hide mobilenav at start.  Display only on small devices */
-}
-.mobile-horiznav li {
-	width: 50%;				/* Only two menu entries on small screens */
-	text-align: center;		/* Make them take up whole width and center text */
-}
-.mobile-horiznav li ul {
-	left: 0;				/* Force left edge all the way to the left */
-	width: 100%;			/* make menu entries span the whole width of the screen */
-}
-.mobile-horiznav li li {
-	width: 100%;    		/* Make menu entries span the whole width of the screen */
+    -o-transition:      color .25s;
+    transition:         color .25s;
 }
 /*----------------------------------------------------------*/
 /* BREADCRUMBS                                              */
@@ -262,7 +257,7 @@ img {
 	border-bottom: dotted 1px black;
 }
 .breadcrumb .pathway {
-	color: #DD5522;
+	color: #D52;
 }
 .breadcrumb .pathway:hover {
 	text-decoration: underline;
@@ -302,7 +297,7 @@ img {
 }.pagination a {
 	display: block;
 	text-decoration: none;
-	color: #DD5522;
+	color: #D52;
 	padding: 0;
 	margin-left: 3px;
 	min-width: 30px;
@@ -340,30 +335,98 @@ img {
 /*----------------------------------------------------------*/
 /* Widescreen and large desktops */
 @media only screen and (max-width : 1200px) {
-	.horiznav li{				/* Reduce padding between menu items on smaller screens */
-		padding: 0 12px;
+	.horiznav li{
+		padding: 0 12px;	/* Reduce padding between menu items on smaller screens */
 	}
 }
 /* Desktops */
 @media only screen and (max-width : 960px) {
-	.horiznav li{				/* Reduce padding between menu items on smaller screens */
-		padding: 0 8px;
+	.horiznav li{
+		padding: 0 8px;		/* Further reduce padding between menu items on smaller screens */
 	}
 }
 /* Vertical iPad and tablets */
 @media only screen and (max-width : 767px) {
 	#header-secondary-image {
-		display: none;
-	}	
-	.content{
-		margin-top: -10px;
-		padding: 0;
-	}	
-	.horiznav {
-		display: none;
+		display: none;		/* Remove secondary header logo */
 	}
-	.mobile-horiznav {
+	.content {
+		padding-bottom: 0;	/* Remove extra padding at bottom of content window */
+	}
+	/*----------------------------------------------------------*/
+	/* SWITCH TO MOBILE NAVIGATION BAR                          */
+	/*----------------------------------------------------------*/
+	.horiznav {
+		font-size: 100%;
+		text-align: left;
+	}
+	.horiznav a.horiznav-menubtn {
+		display: inline-block;		/* Show hamburger menu button */
+	}
+	.horiznav a, .nav-header {
+		font-size: 100% !important;
+	}
+	.horiznav a:hover, .nav-header:hover {
+		color: #4E1400;
+		-moz-transition:    color .25s;
+		-webkit-transition: color .25s;
+		-o-transition:      color .25s;
+		transition:         color .25s;
+	}
+	.horiznav ul {
+		background-color: #D52;
+		position: fixed;
+		top: 0;
+		width: 85vw;				/* Cover 85% of the horizontal screen width */
+		left: -85vw;				/* Hide menu by pushing it -85% of the horizontal screen width to the left */
+		height: 100%;
+		overflow-x: hidden;			/* Disable horizontal scroll */
+		z-index: 20;				/* Stay on top */
+	}
+	.horiznav li {
 		display: block;
+		background: url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x #D52;
+		height: unset;
+		line-height: 40px;
+		padding-left: 20px;
+		list-style-type: none;
+	}
+	.horiznav li:last-child {
+		background: url(../images/bg-nav-vert-divider.png) 0 bottom repeat-x #D52;
+	}
+	.horiznav ul ul {
+		display: none;
+		position: inherit;
+		height: unset;
+		margin-top: 0;
+		margin-left: -20px;
+		z-index: 0;
+	}
+	.horiznav ul ul:before {
+		display: block;
+		background: url(../images/bg-drop-shadow.png) repeat-x #ddd;
+		height: 10px;
+		content: "";
+	}
+	.horiznav ul ul li {
+		display: block;
+		background: url(../images/bg-nav-vert-divider-grey.png) 0 bottom repeat-x #DDD;
+		line-height: 40px;
+		padding-left: 40px;
+		list-style-type: none;
+	}
+	.horiznav ul ul li:last-child {
+		background-color: #DDD;
+	}
+	.horiznav ul ul li a {
+		color: black !important;
+	}
+	.horiznav ul ul li a:hover {
+		color: #D52;
+		-moz-transition:    color .25s;
+		-webkit-transition: color .25s;
+		-o-transition:      color .25s;
+		transition:         color .25s;
 	}
 }
 /* Vertical cell phones */

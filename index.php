@@ -18,18 +18,22 @@ $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1, minimum-sca
 // Include extra Javascript
 $doc->addScriptDeclaration('
 
-	/* Toggle mobile menu selections */
+	/* Toggle menu when hamburger menu is clicked */
 	jQuery(document).ready(function() {
-		jQuery(".mobile-horiznav ul").children("li").each(function() {
-			jQuery(this).click(function() {
-				/* Hide everything */
-				jQuery(".mobile-horiznav ul").children("li").not(this).children("ul").each(function() {
-					jQuery(this).hide();
-				});
-			
-				/* Toggle the currently clicked item */
-				jQuery(this).children("ul").toggle();
-			});
+		
+		jQuery("a.horiznav-menubtn").toggle( function() {
+			jQuery("ul.nav.menu").animate({left: "0px"}, 250);
+		}, function() {
+			jQuery("ul.nav.menu").animate({left: "-85vw"}, 250);
+		});
+
+		jQuery(document).on("click", function(e) {
+			if( !jQuery(e.target).is(jQuery("ul.nav.menu").find("*").add("ul.nav.menu")) ) {
+				if( jQuery("ul.nav.menu").css("left") == "0px" ) {
+					jQuery("a.horiznav-menubtn").click();
+					e.stopPropagation();
+				};
+			};
 		});
 	});
 ');

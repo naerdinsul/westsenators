@@ -62,8 +62,10 @@ $doc->addScriptDeclaration('
 			</div>
 		</div>
 		
+		<?php if($this->countModules( 'header' )) : ?>
 		<!-- OTHER HEADER MODULES -->
 		<jdoc:include type="modules" name="header" title="Header" style="xhtml" />
+		<?php endif; ?>
 	</div>
 
 	<!-- DROPSHADOW -->

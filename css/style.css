@@ -1,5 +1,5 @@
 /*----------------------------------------------------------*/
-/* STANDARD COLOR SCHEME FOR WNLS                           */
+/* STANDARD COLOR SCHEME FOR WESTSENATORS.ORG               */
 /*----------------------------------------------------------*/
 /* X-Light Orange: #FF9E7A                                  */
 /* Light Orange:   #EC784D                                  */
@@ -12,7 +12,7 @@
 /* PAGE STYLES                                              */
 /*----------------------------------------------------------*/
 body {
-	background: rgb(190,190,190) url(../images/bg-content.png) repeat;
+	background: rgb(190,190,190) url(../images/bg-content.jpg) repeat;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -78,7 +78,7 @@ img {
 	padding-bottom: 20px;
 }
 .footer {
-	background: url(../images/bg-footer.png) repeat;
+	background: url(../images/bg-footer.jpg) repeat;
 	color: white;
 	line-height: 1.2em;
 }
